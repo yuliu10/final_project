@@ -1,0 +1,129 @@
+---
+title: "Economist Survey Scraping"
+author: "Nate Stephens"
+date: "3/12/2020"
+output: html_document
+---
+
+Basically this code shows the overall averages, and broken down by education level. I can add any of the other categories you guys want though; the only one I'm still working on is unfortunately one of the useful ones, party affiliation, because that part is sometimes cut off onto a second page and I haven't been able to extract that part as a single table yet, but I'm working on it.
+```{r}
+library(tidyverse)
+library(pdftools)
+library(rvest)
+library(rJava)
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jre1.8.0_241")
+library(tabulizer)
+```
+
+Do you think the federal government should be increasing or decreasing the amount of money it spends on preventing the spread of infectious diseases, or do you think it currently spends about the right amount?
+```{r}
+#This grabs 33rd page of pdf
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 33)
+#Obviously this table is incredibly messy, so the rest of the code is basically just reformatting stuff into a workable dataframe. Since it is so messy I've just been doing the different sections manually, so to speak.
+(df1 <- df_results[[1]] %>% as_tibble())
+df1%>% unite(Education, 5:6, sep = " ")
+
+x1 = first_df$V1[1:6]
+x2 = first_df$V2[1:6]
+x3 = first_df$Education[1:6]
+
+clean1 = tibble(x1,x2,x3)
+#This is need due to the fact that one of the things is spread out over 2 rows
+clean1[6,1] = paste(clean1[5,1],clean1[6,1])
+
+clean2 = clean1[-c(5,1,2),]
+clean2
+
+
+cleanedquestion1 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
+cleanedquestion1
+
+```
+
+
+
+Do you approve or disapprove of Donald Trump placing Vice President Mike Pence in charge of the federal government’s response to the spread of the coronavirus?
+
+```{r}
+
+df_results2 <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 31:32)
+first_df <- df_results2[[1]] %>% as_tibble() %>%
+  unite(Education, 5:6, sep = " ") %>% 
+  unite(V8, 7:8, sep = " ")
+
+x1 = first_df$V1[1:7]
+x2 = first_df$V2[1:7]
+x3 = first_df$Education[1:7]
+
+clean1 = tibble(x1,x2,x3)  
+
+clean2 = clean1[-c(1,2),]
+#""
+cleanedquestion2 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
+cleanedquestion2
+#The above part is fine because all the college stuff is on one page
+
+#This part is tricky and I haven't figured out a good way to extract and combine the tables from 2 different pages of the pdf
+#Second half of party breakdown, only has 3 of the options
+test2 = rbind(first_df, second_df)
+second_df <- df_results2[[2]] %>% as_tibble() %>% 
+  unite(V4, 4:5, sep = " ")
+
+x1 = second_df$V1[1:6]
+x2 = second_df$V2[1:6]
+x3 = second_df$V4[1:6]
+
+(clean1 = tibble(x1,x2,x3))
+
+clean2 = clean1[-c(1,2,3),]
+clean2
+cleanedquestion3 = clean2 %>% separate(col = x3, into = c("Dem", "Rep", "Dem2","Ind","Rep2"), sep = c(" "))%>% rename(Total = x2)
+cleanedquestion3
+```
+How concerned are you about a coronavirus epidemic here in the United States?
+```{r}
+#This grabs correct page of pdf
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 35)
+df4 <- df_results[[1]] %>% as_tibble()
+
+df4 = df4 %>% unite(Education, 5:6, sep = " ")
+
+x1 = df4$V1[1:6]
+x2 = df4$V2[1:6]
+x3 = df4$Education[1:6]
+
+(clean1 = tibble(x1,x2,x3))
+
+clean2 = clean1[-c(1,2),]
+clean2
+
+#""
+cleanedquestion4 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
+cleanedquestion4
+
+```
+
+Favorability of politicians — Joe Biden
+Do you have a favorable or an unfavorable opinion of the following people?
+```{r}
+#This grabs correct page of pdf
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 78)
+df5 <- df_results[[1]] %>% as_tibble()
+
+df5 = df5 %>% unite(Education, 5:6, sep = " ")
+
+x1 = df5$V1[1:7]
+x2 = df5$V2[1:7]
+x3 = df5$Education[1:7]
+
+(clean1 = tibble(x1,x2,x3))
+
+clean2 = clean1[-c(1,2),]
+clean2
+
+#""
+cleanedquestion4 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
+cleanedquestion4
+
+```
+
