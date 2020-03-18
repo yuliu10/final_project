@@ -1,0 +1,43 @@
+---
+title: "ShinyApp"
+author: "141B Group"
+date: "3/18/2020"
+output: html_document
+---
+```{r}
+library(shiny)
+library(tidyverse)
+```
+```{r}
+ui <- fluidPage(
+  
+  #create a layout
+  sidebarLayout(
+    #sidebar
+  sidebarPanel(
+    #user select input of origin
+  selectInput(inputId = "catergory",
+              label = "Select your interested catergory: ",
+              choices = unique(colnames(df1)),
+              selected = NULL),
+  
+  #user select input of destination
+  selectInput(inputId = "question",
+              label = "Select your instered question: ",
+              choices = unique(),
+              selected = NULL)),
+  
+  #main
+  mainPanel(
+    tabsetPanel(
+      tabPanel("Distribution", plotOutput("selected_graph")),
+    #position of sidebar
+    position = c("left"),
+    #fixed
+    fluid = FALSE))))
+
+server <- function(input, output) {
+}
+
+shinyApp(ui = ui, server = server)
+```
