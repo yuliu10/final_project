@@ -80,12 +80,22 @@ cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "4
 cleaned.age.table1
 
 #Race
-df6 = df1 %>%
-  unite(V5, c(V5, V6), sep = " ") %>% 
+df6 = df1 %>% 
   separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
+#All this is necessary to reshift the bottom 2 rows
+
+df6[13:14,5:7] = df6[13:14,6:8]
+
+
+df6[13,8] = df6[13,7]
+df6[14,8] = df6[14,7]
+df6[13,7] = df6[13,6]
+df6[14,7] = df6[14,6]
+df6[13,6] = df6[13,5]
+df6[14,6] = df6[14,5]
 
 df6 = df6 %>% 
-  unite(Race, 5:8, sep = " ")
+  unite(Race, c(5,6,7,9), sep = " ")
 
 x1 = df6$V1[9:16]
 x2 = df6$V2[9:16]
@@ -275,6 +285,8 @@ cleaned.income.table3
 df5 = df1 %>% 
   separate(V5, c("New1", "New2"), sep = " ") %>% 
   unite(Age, c(3,5), sep = " ")
+
+unite(Age, c(V3,V4), sep = " ")
 
 
 x1 = df5$V1[9:16]
