@@ -10,8 +10,8 @@ Basically this code shows the overall averages, and broken down by education lev
 library(tidyverse)
 library(pdftools)
 library(rvest)
-library(rJava)
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jre1.8.0_241")
+library(rJava)
 library(tabulizer)
 ```
 
@@ -758,7 +758,7 @@ cleaned.region.table7
 
 ```{r}
 #Miscellaeneous Scrap code
-
+df_results <- extract_text("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 27)
 #This cleans out the extra spaces from the binding, if necessary
 df2$Education = gsub("\\s+"," ", df2$Education)
 
