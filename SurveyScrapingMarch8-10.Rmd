@@ -1,5 +1,5 @@
 ---
-title: "Economist Survey Scraping"
+title: "SurveyScrapingMarch8-10"
 author: "Nate Stephens"
 date: "3/12/2020"
 output: html_document
@@ -82,17 +82,8 @@ cleaned.age.table1
 #Race
 df6 = df1 %>% 
   separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
-#All this is necessary to reshift the bottom 2 rows
-
+#This is necessary to reshift the bottom 2 rows
 df6[13:14,5:7] = df6[13:14,6:8]
-
-
-df6[13,8] = df6[13,7]
-df6[14,8] = df6[14,7]
-df6[13,7] = df6[13,6]
-df6[14,7] = df6[14,6]
-df6[13,6] = df6[13,5]
-df6[14,6] = df6[14,5]
 
 df6 = df6 %>% 
   unite(Race, c(5,6,7,9), sep = " ")
@@ -193,12 +184,8 @@ cleaned.age.table2
 df6 = df1 %>% 
   separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
 #All this is necessary to reshift the bottom 2 rows
-df6[17,8] = df6[17,7]
-df6[18,8] = df6[18,7]
-df6[17,7] = df6[17,6]
-df6[18,7] = df6[18,6]
-df6[17,6] = df6[17,5]
-df6[18,6] = df6[18,5]
+
+df6[17:18,6:8] = df6[17:18,5:7]
 
 df6 = df6 %>% 
   unite(Race, 6:9, sep = " ")
@@ -285,9 +272,6 @@ cleaned.income.table3
 df5 = df1 %>% 
   separate(V5, c("New1", "New2"), sep = " ") %>% 
   unite(Age, c(3,5), sep = " ")
-
-unite(Age, c(V3,V4), sep = " ")
-
 
 x1 = df5$V1[9:16]
 x2 = df5$V2[9:16]

@@ -1,22 +1,23 @@
 ---
-title: "SurveyScrapingMarch1-3"
+title: "SurveyScrapingMarch15-17"
 author: "Nate Stephens"
-date: "3/18/2020"
+date: "3/19/2020"
 output: html_document
 ---
+
 
 ```{r}
 library(tidyverse)
 library(pdftools)
 library(rvest)
-library(rJava)
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jre1.8.0_241")
+library(rJava)
 library(tabulizer)
 ```
 
 1. How closely are you following the news about coronavirus?
 ```{r}
-df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf", pages = 30)
+df_results <- extract_tables("https://docs.cdn.yougov.com/fcdckgt368/econTabReport.pdf", pages = 7)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -77,23 +78,15 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 clean1$x3 = gsub("\\s+"," ", clean1$x3)
 
-
 cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table1
 
 #Race
-df6 = df1 %>%
-  unite(V5, c(V4, V5), sep = " ") %>% 
-  unite(V5, c(V5, V6), sep = " ")
-#This deals with some extra spaces that resulted from fixing alignment problems
-df6$V5[13:14] <- gsub("^.{0,1}", "", df6$V5[13:14])
+df6 = df1 %>% 
+  unite(Race, c(V5, V6), sep = " ")
 
+df6$Race[13:14] <- gsub("^.{0,3}", "", df6$Race[13:14])
 
-df6 = df6 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4", "New5"), sep = " ")
-
-df6 = df6 %>% 
-  unite(Race, 5:8, sep = " ")
 
 x1 = df6$V1[9:16]
 x2 = df6$V2[9:16]
@@ -125,7 +118,7 @@ cleaned.region.table1
 
 2. Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
 ```{r}
-df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf", pages = 32)
+df_results <- extract_tables("https://docs.cdn.yougov.com/fcdckgt368/econTabReport.pdf", pages = 57)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -230,7 +223,7 @@ cleaned.region.table2
 
 3. How concerned are you about a coronavirus epidemic here in the United States?
 ```{r}
-df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf", pages = 38)
+df_results <- extract_tables("https://docs.cdn.yougov.com/fcdckgt368/econTabReport.pdf", pages = 35)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -276,13 +269,13 @@ clean1 = clean1[-c(1,2),]
 
 
 
-cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table5
+cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table3
 
 #Age
 df5 = df1 %>% 
   separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
+  unite(Age, c(3:5), sep = " ")
 
 
 x1 = df5$V1[9:16]
@@ -290,6 +283,7 @@ x2 = df5$V2[9:16]
 x3 = df5$Age[9:16]
 
 clean1 = tibble(x1,x2,x3)
+clean1$x3 = gsub("\\s+"," ", clean1$x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
@@ -336,7 +330,7 @@ cleaned.region.table3
 
 4. How would you describe the way most Americans are thinking about coronavirus?
 ```{r}
-df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf", pages = 40)
+df_results <- extract_tables("https://docs.cdn.yougov.com/fcdckgt368/econTabReport.pdf", pages = 37)
 df1 <- df_results[[1]] %>% as_tibble() 
 
 df1[4,1] = paste(df1[3,1],df1[4,1])
@@ -411,12 +405,13 @@ cleaned.age.table4
 
 #Race
 df6 = df1 %>%
-  unite(V5, c(V5, V6), sep = " ")
-#This deletes a 6% that was there by mistake
-df6$V5[14] <- gsub("^.{0,3}", "", df6$V5[14])
+  unite(V5, c(V4, V5, V6), sep = " ")
+
+#This removes some extra spaces
+df6$V5[11:15] <- gsub("^.{0,1}", "", df6$V5[11:15])
 
 df6 = df6 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
+  separate(V5, c("New1", "New2", "New3", "New4", "New5"), sep = " ")
 
 df6 = df6 %>% 
   unite(Race, 5:8, sep = " ")
@@ -451,7 +446,7 @@ cleaned.region.table4
 
 5. Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?
 ```{r}
-df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/3rdraw493c/econTabReport.pdf", pages = 44)
+df_results <- extract_tables("https://docs.cdn.yougov.com/fcdckgt368/econTabReport.pdf", pages = 11)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -501,9 +496,9 @@ cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$5
 cleaned.income.table5
 
 #Age
-df5 = df1 %>% 
+df5 = df1 %>%
   separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
+  unite(Age, c(3:5), sep = " ")
 
 
 x1 = df5$V1[9:16]
@@ -511,6 +506,7 @@ x2 = df5$V2[9:16]
 x3 = df5$Age[9:16]
 
 clean1 = tibble(x1,x2,x3)
+clean1$x3 = gsub("\\s+"," ", clean1$x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.age.table5 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
@@ -519,11 +515,10 @@ cleaned.age.table5
 #Race
 df6 = df1 %>%
   unite(V5, c(V5, V6), sep = " ")
-#This deletes a 6% that was there by mistake
 df6$V5[14] <- gsub("^.{0,3}", "", df6$V5[14])
-
 df6 = df6 %>% 
   separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
+
 
 df6 = df6 %>% 
   unite(Race, 5:8, sep = " ")
@@ -555,5 +550,3 @@ cleaned.region.table5 = clean1 %>% separate(col = x3, into = c("Northeast", "Mid
 cleaned.region.table5
 
 ```
-
-
