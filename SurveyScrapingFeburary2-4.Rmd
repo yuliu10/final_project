@@ -1,0 +1,431 @@
+---
+title: "SurveyScrapingFeburary2-4"
+author: "Nate Stephens"
+date: "3/19/2020"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(pdftools)
+library(rvest)
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jre1.8.0_241")
+library(rJava)
+library(tabulizer)
+```
+
+1. How closely are you following the news about coronavirus?
+```{r}
+df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf", pages = 8)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+#Gender
+df3 = df1 %>% separate(V4, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:8]
+x2 = df3$V2[1:8]
+x3 = df3$V3[1:8]
+x4 = df3$New1[1:8]
+
+clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
+
+cleaned.gender.table1 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table1
+
+#Income
+df4 = df1 
+
+x1 = df4$V1[9:16]
+x2 = df4$V2[9:16]
+x3 = df4$V6[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.income.table1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table1
+
+#Age
+df5 = df1 %>% 
+  separate(V4, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(5,7), sep = " ")
+
+
+x1 = df5$V1[1:8]
+x2 = df5$V2[1:8]
+x3 = df5$Age[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table1
+
+#Race
+df6 = df1 %>%
+  unite(Race, c(V8, V9, V10), sep = " ")
+
+
+x1 = df6$V1[1:8]
+x2 = df6$V2[1:8]
+x3 = df6$Race[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table1 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table1
+
+#Region
+df7 = df1 %>% 
+  unite(Region, c(V8, V9, V10), sep = " ")
+
+
+x1 = df7$V1[9:16]
+x2 = df7$V2[9:16]
+x3 = df7$Region[9:16]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table1 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table1
+```
+
+2. Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
+```{r}
+df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf", pages = 10)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+#Gender
+df3 = df1 %>% separate(V4, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:9]
+x2 = df3$V2[1:9]
+x3 = df3$V3[1:9]
+x4 = df3$New1[1:9]
+
+clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
+
+cleaned.gender.table2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table2
+
+#Income
+df4 = df1 
+
+x1 = df4$V1[10:18]
+x2 = df4$V2[10:18]
+x3 = df4$V6[10:18]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.income.table2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table2
+
+#Age
+df5 = df1 %>% 
+  separate(V4, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(5,7), sep = " ")
+
+
+x1 = df5$V1[1:9]
+x2 = df5$V2[1:9]
+x3 = df5$Age[1:9]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table2
+
+#Race
+df6 = df1 %>%
+  unite(Race, c(V8, V9, V10), sep = " ")
+
+
+x1 = df6$V1[1:9]
+x2 = df6$V2[1:9]
+x3 = df6$Race[1:9]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table2
+
+#Region
+df7 = df1 %>% 
+  unite(Region, c(V8, V9, V10), sep = " ")
+
+
+x1 = df7$V1[10:18]
+x2 = df7$V2[10:18]
+x3 = df7$Region[10:18]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table2 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table2
+```
+
+3. How concerned are you about a coronavirus epidemic here in the United States?
+```{r}
+df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf", pages = 12)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+#Gender
+df3 = df1 %>% separate(V4, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:8]
+x2 = df3$V2[1:8]
+x3 = df3$V3[1:8]
+x4 = df3$New1[1:8]
+
+clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
+
+cleaned.gender.table3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table3
+
+#Income
+df4 = df1 
+
+x1 = df4$V1[9:16]
+x2 = df4$V2[9:16]
+x3 = df4$V6[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table3
+
+#Age
+df5 = df1 %>% 
+  separate(V4, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(5,7), sep = " ")
+
+
+x1 = df5$V1[1:8]
+x2 = df5$V2[1:8]
+x3 = df5$Age[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table3
+
+#Race
+df6 = df1 %>%
+  unite(Race, c(V8, V9, V10), sep = " ")
+
+
+x1 = df6$V1[1:8]
+x2 = df6$V2[1:8]
+x3 = df6$Race[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table3
+
+#Region
+df7 = df1 %>% 
+  unite(Region, c(V8, V9, V10), sep = " ")
+
+
+x1 = df7$V1[9:16]
+x2 = df7$V2[9:16]
+x3 = df7$Region[9:16]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table3
+```
+
+4. How would you describe the way most Americans are thinking about coronavirus?
+```{r}
+df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf", pages = 14)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+df1[4,1] = paste(df1[3,1],df1[4,1])
+df1[6,1] = paste(df1[5,1],df1[6,1])
+df1[9,1] = paste(df1[7,1],df1[8,1],df1[9,1] )
+df1[16,1] = paste(df1[15,1],df1[16,1])
+df1[18,1] = paste(df1[17,1],df1[18,1])
+df1[21,1] = paste(df1[19,1],df1[20,1],df1[21,1] )
+df1 = df1[-c(3,5,7,8,15,17,19,20),]
+
+#Gender
+df3 = df1 %>% separate(V4, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:8]
+x2 = df3$V2[1:8]
+x3 = df3$V3[1:8]
+x4 = df3$New1[1:8]
+
+clean1 = tibble(x1,x2,x3, x4)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.gender.table4 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table4
+
+#Income
+df4 = df1 
+
+x1 = df4$V1[9:16]
+x2 = df4$V2[9:16]
+x3 = df4$V6[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.income.table4 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table4
+
+#Age
+df5 = df1 %>% 
+  separate(V4, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(5,7), sep = " ")
+
+
+x1 = df5$V1[1:8]
+x2 = df5$V2[1:8]
+x3 = df5$Age[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table4 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table4
+
+#Race
+df6 = df1 %>%
+  unite(Race, c(V8, V9, V10), sep = " ")
+
+
+x1 = df6$V1[1:8]
+x2 = df6$V2[1:8]
+x3 = df6$Race[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table4 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table4
+
+#Region
+df7 = df1 %>% 
+  unite(Region, c(V8, V9, V10), sep = " ")
+
+
+x1 = df7$V1[9:16]
+x2 = df7$V2[9:16]
+x3 = df7$Region[9:16]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table4 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table4
+```
+
+5. Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?
+```{r}
+df_results <- extract_tables("https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/73jqd6u5mv/econTabReport.pdf", pages = 16)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+#Gender
+df3 = df1 %>% separate(V4, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:8]
+x2 = df3$V2[1:8]
+x3 = df3$V3[1:8]
+x4 = df3$New1[1:8]
+
+clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
+
+cleaned.gender.table5 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table5
+
+#Income
+df4 = df1 
+
+x1 = df4$V1[9:16]
+x2 = df4$V2[9:16]
+x3 = df4$V6[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table5
+
+#Age
+df5 = df1 %>% 
+  separate(V4, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(5,7), sep = " ")
+
+
+x1 = df5$V1[1:8]
+x2 = df5$V2[1:8]
+x3 = df5$Age[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table5 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table5
+
+#Race
+df6 = df1 %>%
+  unite(Race, c(V8, V9, V10), sep = " ")
+
+
+x1 = df6$V1[1:8]
+x2 = df6$V2[1:8]
+x3 = df6$Race[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table5 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table5
+
+#Region
+df7 = df1 %>% 
+  unite(Region, c(V8, V9, V10), sep = " ")
+
+
+x1 = df7$V1[9:16]
+x2 = df7$V2[9:16]
+x3 = df7$Region[9:16]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table5 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table5
+```
+
+
