@@ -5,7 +5,6 @@ date: "3/12/2020"
 output: html_document
 ---
 
-Basically this code shows the overall averages, and broken down by education level. I can add any of the other categories you guys want though; the only one I'm still working on is unfortunately one of the useful ones, party affiliation, because that part is sometimes cut off onto a second page and I haven't been able to extract that part as a single table yet, but I'm working on it.
 ```{r}
 library(tidyverse)
 library(pdftools)
@@ -15,7 +14,7 @@ library(rJava)
 library(tabulizer)
 ```
 
-How closely are you following the news about coronavirus?
+1. How closely are you following the news about coronavirus?
 ```{r}
 df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 27)
 
@@ -116,7 +115,7 @@ cleaned.region.table1
 
 ```
 
-Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
+2. Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
 ```{r}
 df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 29)
 
@@ -220,115 +219,10 @@ cleaned.region.table2 = clean1 %>% separate(col = x3, into = c("Northeast", "Mid
 cleaned.region.table2
 ```
 
-Do you approve or disapprove of Donald Trump placing Vice President Mike Pence in charge of the federal government’s response to the spread of the coronavirus?
+
+3. How concerned are you about a coronavirus epidemic here in the United States?
 ```{r}
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 31:32)
-
-#Education
-df1 <- df_results[[1]] %>% as_tibble() 
-  
-df2 = df1 %>% unite(Education, 5:6, sep = " ") %>% 
-  separate(V3, c("New1", "New2", "New3"), sep = " ") %>% 
-  unite(Education, c(5,7), sep = " ")
-
-x1 = df2$V1[1:9]
-x2 = df2$V2[1:9]
-x3 = df2$Education[1:9]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.edu.table3 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table3
-
-#Gender
-df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
-
-x1 = df3$V1[1:9]
-x2 = df3$V2[1:9]
-x3 = df3$New1[1:9]
-x4 = df3$New2[1:9]
-
-clean1 = tibble(x1,x2,x3, x4)
-
-clean1 = clean1[-c(1,2),]
-
-cleaned.gender.table3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table3
-
-#Income
-df4 = df1 %>% unite(Income, 7:9, sep = " ")
-
-x1 = df4$V1[1:9]
-x2 = df4$V2[1:9]
-x3 = df4$Income[1:9]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table3
-
-#Age
-df5 = df1 %>% 
-  separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
-
-x1 = df5$V1[10:18]
-x2 = df5$V2[10:18]
-x3 = df5$Age[10:18]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table3
-
-#Race
-df6 = df1 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
-#All this is necessary to reshift the bottom 2 rows
-df6[17,8] = df6[17,7]
-df6[18,8] = df6[18,7]
-df6[17,7] = df6[17,6]
-df6[18,7] = df6[18,6]
-df6[17,6] = df6[17,5]
-df6[18,6] = df6[18,5]
-
-df6 = df6 %>% 
-  unite(Race, 6:9, sep = " ")
-
-x1 = df6$V1[10:18]
-x2 = df6$V2[10:18]
-x3 = df6$Race[10:18]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.race.table3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table3
-
-#Region
-df7 = df1 %>% 
-  unite(Region, 7:9, sep = " ")
-
-x1 = df7$V1[10:18]
-x2 = df7$V2[10:18]
-x3 = df7$Region[10:18]
-
-clean1 = tibble(x1,x2,x3)
-
-clean1 = clean1[-c(1,2),]
-
-cleaned.region.table3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table3
-```
-
-
-
-Do you think the federal government should be increasing or decreasing the amount of money it spends on preventing the spread of infectious diseases, or do you think it currently spends about the right amount?
-```{r}
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 33)
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 35)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -342,15 +236,14 @@ x2 = df2$V2[1:8]
 x3 = df2$Education[1:8]
 
 clean1 = tibble(x1,x2,x3)
-#This is need due to the fact that one of the things is spread out over 2 rows
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table4 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table4
+cleaned.edu.table3 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+cleaned.edu.table3
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
+
 
 x1 = df3$V1[1:8]
 x2 = df3$V2[1:8]
@@ -358,9 +251,121 @@ x3 = df3$New1[1:8]
 x4 = df3$New2[1:8]
 
 clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
 
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+cleaned.gender.table3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table3
+
+#Income
+df4 = df1 %>% unite(Income, 7:9, sep = " ")
+
+x1 = df4$V1[1:8]
+x2 = df4$V2[1:8]
+x3 = df4$Income[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+
+
+cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table3
+
+#Age
+df5 = df1 %>% 
+  separate(V5, c("New1", "New2"), sep = " ") %>% 
+  unite(Age, c(3,5), sep = " ")
+
+
+x1 = df5$V1[9:16]
+x2 = df5$V2[9:16]
+x3 = df5$Age[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table3
+
+#Race
+df6 = df1 %>%
+  unite(V5, c(V5, V6), sep = " ")
+#This deletes a 6% that was there by mistake
+df6$V5[14] <- gsub("^.{0,3}", "", df6$V5[14])
+
+df6 = df6 %>% 
+  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
+
+df6 = df6 %>% 
+  unite(Race, 5:8, sep = " ")
+
+x1 = df6$V1[9:16]
+x2 = df6$V2[9:16]
+x3 = df6$Race[9:16]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.race.table3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+cleaned.race.table3
+
+#Region
+df7 = df1 %>% 
+  unite(Region, 7:9, sep = " ")
+
+
+x1 = df7$V1[9:16]
+x2 = df7$V2[9:16]
+x3 = df7$Region[9:16]
+
+clean1 = tibble(x1,x2,x3)
+
+clean1 = clean1[-c(1,2),]
+
+cleaned.region.table3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+cleaned.region.table3
+```
+
+4. How would you describe the way most Americans are thinking about coronavirus?
+```{r}
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 42)
+df1 <- df_results[[1]] %>% as_tibble() 
+
+df1[4,1] = paste(df1[3,1],df1[4,1])
+df1[6,1] = paste(df1[5,1],df1[6,1])
+df1[9,1] = paste(df1[7,1],df1[8,1],df1[9,1] )
+df1[16,1] = paste(df1[15,1],df1[16,1])
+df1[18,1] = paste(df1[17,1],df1[18,1])
+df1[21,1] = paste(df1[19,1],df1[20,1],df1[21,1] )
+df1 = df1[-c(3,5,7,8,15,17,19,20),]
+
+
+#Education
+df2 = df1 %>% unite(Education, 5:6, sep = " ") %>% 
+  separate(V3, c("New1", "New2", "New3"), sep = " ") %>% 
+  unite(Education, c(5,7), sep = " ")
+
+x1 = df2$V1[1:8]
+x2 = df2$V2[1:8]
+x3 = df2$Education[1:8]
+
+clean1 = tibble(x1,x2,x3)
+clean1 = clean1[-c(1,2),]
+
+cleaned.edu.table4 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+cleaned.edu.table4
+
+#Gender
+df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
+
+
+x1 = df3$V1[1:8]
+x2 = df3$V2[1:8]
+x3 = df3$New1[1:8]
+x4 = df3$New2[1:8]
+
+clean1 = tibble(x1,x2,x3, x4)
+clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table4 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
 cleaned.gender.table4
@@ -373,9 +378,9 @@ x2 = df4$V2[1:8]
 x3 = df4$Income[1:8]
 
 clean1 = tibble(x1,x2,x3)
-#This is need due to the fact that one of the responses is spread out over 2 rows
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+clean1 = clean1[-c(1,2),]
+
+
 
 cleaned.income.table4 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table4
@@ -385,31 +390,36 @@ df5 = df1 %>%
   separate(V5, c("New1", "New2"), sep = " ") %>% 
   unite(Age, c(3,5), sep = " ")
 
+
 x1 = df5$V1[9:16]
 x2 = df5$V2[9:16]
 x3 = df5$Age[9:16]
 
 clean1 = tibble(x1,x2,x3)
-#This is need due to the fact that one of the responses is spread out over 2 rows
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+clean1 = clean1[-c(1,2),]
 
 cleaned.age.table4 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table4
 
 #Race
-df6 = df1 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ") %>% 
-  unite(Race, 6:9, sep = " ")
+df6 = df1 %>%
+  unite(V5, c(V4, V5, V6), sep = " ")
+
+#This removes some extra spaces
+df6$V5[11:15] <- gsub("^.{0,1}", "", df6$V5[11:15])
+
+df6 = df6 %>% 
+  separate(V5, c("New1", "New2", "New3", "New4", "New5"), sep = " ")
+
+df6 = df6 %>% 
+  unite(Race, 5:8, sep = " ")
 
 x1 = df6$V1[9:16]
 x2 = df6$V2[9:16]
 x3 = df6$Race[9:16]
 
 clean1 = tibble(x1,x2,x3)
-#This is need due to the fact that one of the responses is spread out over 2 rows
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+clean1 = clean1[-c(1,2),]
 
 cleaned.race.table4 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
 cleaned.race.table4
@@ -418,22 +428,23 @@ cleaned.race.table4
 df7 = df1 %>% 
   unite(Region, 7:9, sep = " ")
 
+
 x1 = df7$V1[9:16]
 x2 = df7$V2[9:16]
 x3 = df7$Region[9:16]
 
 clean1 = tibble(x1,x2,x3)
-#This is need due to the fact that one of the responses is spread out over 2 rows
-clean1[6,1] = paste(clean1[5,1],clean1[6,1])
-clean1 = clean1[-c(5,1,2),]
+
+clean1 = clean1[-c(1,2),]
 
 cleaned.region.table4 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
 cleaned.region.table4
+
 ```
 
-How concerned are you about a coronavirus epidemic here in the United States?
+5. Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?
 ```{r}
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 35)
+df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 46)
 
 #Education
 df1 <- df_results[[1]] %>% as_tibble() 
@@ -483,9 +494,8 @@ cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$5
 cleaned.income.table5
 
 #Age
-df5 = df1 %>% 
-  separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
+df5 = df1 %>%
+  unite(Age, c(V3,V4), sep = " ")
 
 
 x1 = df5$V1[9:16]
@@ -501,8 +511,6 @@ cleaned.age.table5
 #Race
 df6 = df1 %>%
   unite(V5, c(V5, V6), sep = " ")
-#This deletes a 6% that was there by mistake
-df6$V5[14] <- gsub("^.{0,3}", "", df6$V5[14])
 
 df6 = df6 %>% 
   separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
@@ -535,292 +543,5 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.region.table5 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
 cleaned.region.table5
-```
-
-How well prepared is the U.S. to deal with an epidemic like the coronavirus?
-```{r}
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 37)
-
-#Education
-df1 <- df_results[[1]] %>% as_tibble() 
-  
-df2 = df1 %>% unite(Education, 5:6, sep = " ") %>% 
-  separate(V3, c("New1", "New2", "New3"), sep = " ") %>% 
-  unite(Education, c(5,7), sep = " ")
-
-x1 = df2$V1[1:8]
-x2 = df2$V2[1:8]
-x3 = df2$Education[1:8]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.edu.table6 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table6
-
-#Gender
-df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
-
-
-x1 = df3$V1[1:8]
-x2 = df3$V2[1:8]
-x3 = df3$New1[1:8]
-x4 = df3$New2[1:8]
-
-clean1 = tibble(x1,x2,x3, x4)
-clean1 = clean1[-c(1,2),]
-
-cleaned.gender.table6 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table6
-
-#Income
-df4 = df1 %>% unite(Income, 7:9, sep = " ")
-
-x1 = df4$V1[1:8]
-x2 = df4$V2[1:8]
-x3 = df4$Income[1:8]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-
-
-cleaned.income.table6 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table6
-
-#Age
-df5 = df1 %>% 
-  separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
-
-
-x1 = df5$V1[9:16]
-x2 = df5$V2[9:16]
-x3 = df5$Age[9:16]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.age.table6 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table6
-
-#Race
-df6 = df1 %>%
-  unite(V5, c(V5, V6), sep = " ")
-
-df6 = df6 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
-
-df6 = df6 %>% 
-  unite(Race, 5:8, sep = " ")
-
-x1 = df6$V1[9:16]
-x2 = df6$V2[9:16]
-x3 = df6$Race[9:16]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.race.table6 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table6
-
-#Region
-df7 = df1 %>% 
-  unite(Region, 7:9, sep = " ")
-
-
-x1 = df7$V1[9:16]
-x2 = df7$V2[9:16]
-x3 = df7$Region[9:16]
-
-clean1 = tibble(x1,x2,x3)
-
-clean1 = clean1[-c(1,2),]
-
-cleaned.region.table6 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table6
-```
-
-From what you know about it now, does the U.S. have enough testing kits on hand for the coronavirus?
-```{r}
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 39)
-
-#Education
-df1 <- df_results[[1]] %>% as_tibble() 
-  
-df2 = df1 %>% unite(Education, 5:6, sep = " ") %>% 
-  separate(V3, c("New1", "New2", "New3"), sep = " ") %>% 
-  unite(Education, c(5,7), sep = " ")
-
-x1 = df2$V1[1:7]
-x2 = df2$V2[1:7]
-x3 = df2$Education[1:7]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.edu.table7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table7
-
-#Gender
-df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
-
-
-x1 = df3$V1[1:7]
-x2 = df3$V2[1:7]
-x3 = df3$New1[1:7]
-x4 = df3$New2[1:7]
-
-clean1 = tibble(x1,x2,x3, x4)
-clean1 = clean1[-c(1,2),]
-
-cleaned.gender.table7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table7
-
-#Income
-df4 = df1 %>% unite(Income, 7:9, sep = " ")
-
-x1 = df4$V1[1:7]
-x2 = df4$V2[1:7]
-x3 = df4$Income[1:7]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.income.table7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table7
-
-#Age
-df5 = df1 %>% 
-  separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
-
-
-x1 = df5$V1[8:14]
-x2 = df5$V2[8:14]
-x3 = df5$Age[8:14]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.age.table7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table7
-
-#Race
-df6 = df1 %>%
-  unite(V5, c(V5, V6), sep = " ")
-
-df6 = df6 %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
-
-df6 = df6 %>% 
-  unite(Race, 5:8, sep = " ")
-
-x1 = df6$V1[8:14]
-x2 = df6$V2[8:14]
-x3 = df6$Race[8:14]
-
-clean1 = tibble(x1,x2,x3)
-clean1 = clean1[-c(1,2),]
-
-cleaned.race.table7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table7
-
-#Region
-df7 = df1 %>% 
-  unite(Region, 7:9, sep = " ")
-
-
-x1 = df7$V1[8:14]
-x2 = df7$V2[8:14]
-x3 = df7$Region[8:14]
-
-clean1 = tibble(x1,x2,x3)
-
-clean1 = clean1[-c(1,2),]
-
-cleaned.region.table7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table7
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```{r}
-#Miscellaeneous Scrap code
-df_results <- extract_text("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 27)
-#This cleans out the extra spaces from the binding, if necessary
-df2$Education = gsub("\\s+"," ", df2$Education)
 
 ```
-Favorability of politicians — Joe Biden
-Do you have a favorable or an unfavorable opinion of the following people?
-```{r}
-#This grabs correct page of pdf
-df_results <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 78)
-df5 <- df_results[[1]] %>% as_tibble()
-
-df5 = df5 %>% unite(Education, 5:6, sep = " ")
-
-x1 = df5$V1[1:7]
-x2 = df5$V2[1:7]
-x3 = df5$Education[1:7]
-
-(clean1 = tibble(x1,x2,x3))
-
-clean2 = clean1[-c(1,2),]
-clean2
-
-#""
-cleanedquestion4 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
-cleanedquestion4
-
-```
-
-```{r}
-#Education
-df_results2 <- extract_tables("https://docs.cdn.yougov.com/vrbl9mmctz/econTabReport.pdf", pages = 31:32)
-first_df <- df_results2[[1]] %>% as_tibble() %>%
-  unite(Education, 5:6, sep = " ") %>% 
-  unite(V8, 7:8, sep = " ")
-
-x1 = first_df$V1[1:7]
-x2 = first_df$V2[1:7]
-x3 = first_df$Education[1:7]
-
-clean1 = tibble(x1,x2,x3)  
-
-clean2 = clean1[-c(1,2),]
-#""
-cleanedquestion2 = clean2 %>% separate(col = x3, into = c("Some college", "College Grad", "Postgrad"), sep = c(" "))%>% rename(Total = x2)
-cleanedquestion2
-#The above part is fine because all the college stuff is on one page
-
-#This part is tricky and I haven't figured out a good way to extract and combine the tables from 2 different pages of the pdf
-#Second half of party breakdown, only has 3 of the options
-test2 = rbind(first_df, second_df)
-second_df <- df_results2[[2]] %>% as_tibble() %>% 
-  unite(V4, 4:5, sep = " ")
-
-x1 = second_df$V1[1:6]
-x2 = second_df$V2[1:6]
-x3 = second_df$V4[1:6]
-
-(clean1 = tibble(x1,x2,x3))
-
-clean2 = clean1[-c(1,2,3),]
-clean2
-cleanedquestion3 = clean2 %>% separate(col = x3, into = c("Dem", "Rep", "Dem2","Ind","Rep2"), sep = c(" "))%>% rename(Total = x2)
-cleanedquestion3
-```
-

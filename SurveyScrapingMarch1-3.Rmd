@@ -66,7 +66,7 @@ cleaned.income.table1
 #Age
 df5 = df1 %>% 
   separate(V5, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(3,5), sep = " ")
+  unite(Age, c(3:5), sep = " ")
 
 
 x1 = df5$V1[9:16]
@@ -75,14 +75,23 @@ x3 = df5$Age[9:16]
 
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
+clean1$x3 = gsub("\\s+"," ", clean1$x3)
+
 
 cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table1
 
 #Race
 df6 = df1 %>%
-  unite(V5, c(V5, V6), sep = " ") %>% 
-  separate(V5, c("New1", "New2", "New3", "New4"), sep = " ")
+  unite(V5, c(V4, V5), sep = " ") %>% 
+  unite(V5, c(V5, V6), sep = " ")
+#This deals with some extra spaces that resulted from fixing alignment problems
+df6$V5[13] <- gsub("^.{0,1}", "", df6$V5[13])
+df6$V5[14] <- gsub("^.{0,1}", "", df6$V5[1])
+
+
+df6 = df6 %>% 
+  separate(V5, c("New1", "New2", "New3", "New4", "New5"), sep = " ")
 
 df6 = df6 %>% 
   unite(Race, 5:8, sep = " ")
