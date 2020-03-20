@@ -436,5 +436,13 @@ survey1list[[1]]
 names(survey1list) = c("cleaned.age.table1", "cleaned.gender.table1", "cleaned.income.table1", "cleaned.race.table1", "cleaned.region.table1", "cleaned.age.table2", "cleaned.gender.table2", "cleaned.income.table2", "cleaned.race.table2", "cleaned.region.table2", "cleaned.age.table3", "cleaned.gender.table3", "cleaned.income.table3", "cleaned.race.table3", "cleaned.region.table3", "cleaned.age.table4", "cleaned.gender.table4", "cleaned.income.table4", "cleaned.race.table4", "cleaned.region.table4", "cleaned.age.table5", "cleaned.gender.table5", "cleaned.income.table5", "cleaned.race.table5", "cleaned.region.table5")
 
 survey1list$cleaned.age.table1
+
+cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)] = 
+  map_dfc(cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)], parse_number) / 100
+
+a<-cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)]
+
+
+ggplot(a, aes(x=names(a),y=a$`18-29`))+geom_point()+geom_line()
 ```
 
