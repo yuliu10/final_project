@@ -1,0 +1,14 @@
+---
+title: "map_ex"
+author: "Kevin Oh"
+date: "3/20/2020"
+output: html_document
+---
+
+```{r}
+#cleaned.age.table1.1 refers to first question of the first week
+library(tidyverse)
+
+cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)] = 
+  map_dfc(cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)], parse_number) / 100
+```
