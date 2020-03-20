@@ -301,8 +301,7 @@ cleaned.income.table4.1
 
 #Age
 df5 = df1 %>% 
-  separate(V4, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(5,7), sep = " ")
+  unite(Age, c(5,6), sep = " ")
 
 
 x1 = df5$V1[1:8]
@@ -428,4 +427,14 @@ cleaned.region.table5.1 = clean1 %>% separate(col = x3, into = c("Northeast", "M
 cleaned.region.table5.1
 ```
 
+```{r}
+survey1list = list(cleaned.age.table1, cleaned.gender.table1, cleaned.income.table1, cleaned.race.table1, cleaned.region.table1, cleaned.age.table2, cleaned.gender.table2, cleaned.income.table2, cleaned.race.table2, cleaned.region.table2, cleaned.age.table3, cleaned.gender.table3, cleaned.income.table3, cleaned.race.table3, cleaned.region.table3, cleaned.age.table4, cleaned.gender.table4, cleaned.income.table4, cleaned.race.table4, cleaned.region.table4, cleaned.age.table5, cleaned.gender.table5, cleaned.income.table5, cleaned.race.table5, cleaned.region.table5)
+
+survey1list[[1]]
+
+#or
+names(survey1list) = c("cleaned.age.table1", "cleaned.gender.table1", "cleaned.income.table1", "cleaned.race.table1", "cleaned.region.table1", "cleaned.age.table2", "cleaned.gender.table2", "cleaned.income.table2", "cleaned.race.table2", "cleaned.region.table2", "cleaned.age.table3", "cleaned.gender.table3", "cleaned.income.table3", "cleaned.race.table3", "cleaned.region.table3", "cleaned.age.table4", "cleaned.gender.table4", "cleaned.income.table4", "cleaned.race.table4", "cleaned.region.table4", "cleaned.age.table5", "cleaned.gender.table5", "cleaned.income.table5", "cleaned.race.table5", "cleaned.region.table5")
+
+survey1list$cleaned.age.table1
+```
 
