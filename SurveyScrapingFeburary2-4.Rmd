@@ -301,8 +301,7 @@ cleaned.income.table4
 
 #Age
 df5 = df1 %>% 
-  separate(V4, c("New1", "New2"), sep = " ") %>% 
-  unite(Age, c(5,7), sep = " ")
+  unite(Age, c(5,6), sep = " ")
 
 
 x1 = df5$V1[1:8]
