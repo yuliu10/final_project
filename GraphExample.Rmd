@@ -1,0 +1,22 @@
+---
+title: "Graph Example"
+author: "Nate Stephens"
+date: "3/20/2020"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+#After running Feb2-4 code, make List of dataframes
+survey1 = list(cleaned.age.table1, cleaned.gender.table1, cleaned.income.table1, cleaned.race.table1, cleaned.region.table1)
+
+#Then run Feb9-11 code, make second list
+survey2 = list(cleaned.age.table1, cleaned.gender.table1, cleaned.income.table1, cleaned.race.table1, cleaned.region.table1)
+
+survey2[[2]]$Male
+#Making new dataframe
+
+(GenderTotal1 = tibble(survey1[[2]]$Male, survey2[[2]]$Male))
+
+```
+
