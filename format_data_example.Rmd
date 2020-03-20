@@ -48,7 +48,7 @@ Now, our three data frames are in the proper format, so we can bind them by row 
 agedf = rbind(x, y, z) %>%
   pivot_longer(c(-question, -week, -response), names_to = "age", values_to = "percent")
 
-ageddf
+agedf
 ```
 
 To create a gpplot for question 1, age 30-44:
