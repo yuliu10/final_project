@@ -31,8 +31,8 @@ x4 = df3$New1[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table1 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table1
+cleaned.gender.table1.3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table1.3
 
 #Income
 df4 = df1 
@@ -60,8 +60,8 @@ x3 = df5$Age[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table1
+cleaned.age.table1.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table1.3
 
 #Race
 df6 = df1 %>%
@@ -75,8 +75,7 @@ x3 = df6$Race[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table1 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table1
+cleaned.race.table1.3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
 
 #Region
 df7 = df1 %>% 
@@ -91,8 +90,7 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table1 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table1
+cleaned.region.table1.3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
 ```
 
 2. Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
@@ -112,8 +110,8 @@ x4 = df3$New1[1:9]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table2
+cleaned.gender.table2.3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table2.3
 
 #Income
 df4 = df1 
@@ -125,8 +123,8 @@ x3 = df4$V6[10:18]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table2
+cleaned.income.table2.3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+cleaned.income.table2.3
 
 #Age
 df5 = df1 %>% 
@@ -141,8 +139,8 @@ x3 = df5$Age[1:9]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table2
+cleaned.age.table2.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -156,8 +154,8 @@ x3 = df6$Race[1:9]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table2
+cleaned.race.table2.3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -172,8 +170,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table2 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table2
+cleaned.region.table2.3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 3. How concerned are you about a coronavirus epidemic here in the United States?
@@ -193,8 +191,8 @@ x4 = df3$New1[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table3
+cleaned.gender.table3.3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 
@@ -206,8 +204,8 @@ x3 = df4$V6[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table3
+cleaned.income.table3.3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -222,8 +220,8 @@ x3 = df5$Age[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table3
+cleaned.age.table3.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -237,8 +235,8 @@ x3 = df6$Race[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table3
+cleaned.race.table3.3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -253,8 +251,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table3
+cleaned.region.table3.3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 4. How would you describe the way most Americans are thinking about coronavirus?
@@ -283,8 +281,8 @@ clean1 = tibble(x1,x2,x3, x4)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table4 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table4
+cleaned.gender.table4.3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 
@@ -296,8 +294,8 @@ x3 = df4$V6[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table4 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table4
+cleaned.income.table4.3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -312,8 +310,8 @@ x3 = df5$Age[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table4 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table4
+cleaned.age.table4.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+cleaned.age.table4.3
 
 #Race
 df6 = df1 %>%
@@ -327,8 +325,8 @@ x3 = df6$Race[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table4 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table4
+cleaned.race.table4.3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -343,8 +341,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table4 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table4
+cleaned.region.table4.3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 5. Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?
@@ -364,8 +362,8 @@ x4 = df3$New1[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table5 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table5
+cleaned.gender.table5.3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+cleaned.gender.table5.3
 
 #Income
 df4 = df1 
@@ -377,8 +375,8 @@ x3 = df4$V6[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table5
+cleaned.income.table5.3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -393,8 +391,8 @@ x3 = df5$Age[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table5 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table5
+cleaned.age.table5.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -408,8 +406,8 @@ x3 = df6$Race[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table5 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table5
+cleaned.race.table5.3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -424,8 +422,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table5 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table5
+cleaned.region.table5.3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 

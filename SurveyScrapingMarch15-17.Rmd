@@ -33,8 +33,8 @@ x3 = df2$Education[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table1 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table1
+cleaned.edu.table1.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
@@ -48,8 +48,8 @@ x4 = df3$New2[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table1 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table1
+cleaned.gender.table1.7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -61,8 +61,8 @@ x3 = df4$Income[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table1
+cleaned.income.table1.7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -78,8 +78,8 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 clean1$x3 = gsub("\\s+"," ", clean1$x3)
 
-cleaned.age.table1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table1
+cleaned.age.table1.7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>% 
@@ -95,8 +95,8 @@ x3 = df6$Race[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table1 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table1
+cleaned.race.table1.7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -111,8 +111,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table1 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table1
+cleaned.region.table1.7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 
 ```
 
@@ -134,8 +134,8 @@ x3 = df2$Education[1:9]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table2 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table2
+cleaned.edu.table2.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
@@ -149,8 +149,8 @@ clean1 = tibble(x1,x2,x3, x4)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table2
+cleaned.gender.table2.7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -162,8 +162,8 @@ x3 = df4$Income[1:9]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.income.table2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table2
+cleaned.income.table2.7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -177,8 +177,8 @@ x3 = df5$Age[10:18]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table2
+cleaned.age.table2.7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>% 
@@ -201,8 +201,8 @@ x3 = df6$Race[10:18]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table2
+cleaned.race.table2.7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -216,8 +216,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table2 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table2
+cleaned.region.table2.7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 
@@ -239,8 +239,8 @@ x3 = df2$Education[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table3 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table3
+cleaned.edu.table3.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
@@ -254,8 +254,8 @@ x4 = df3$New2[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table3 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table3
+cleaned.gender.table3.7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -269,8 +269,8 @@ clean1 = clean1[-c(1,2),]
 
 
 
-cleaned.income.table3 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table3
+cleaned.income.table3.7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -286,8 +286,8 @@ clean1 = tibble(x1,x2,x3)
 clean1$x3 = gsub("\\s+"," ", clean1$x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table3
+cleaned.age.table3.7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -308,8 +308,8 @@ x3 = df6$Race[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table3 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table3
+cleaned.race.table3.7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -324,8 +324,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table3 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table3
+cleaned.region.table3.7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 ```
 
 4. How would you describe the way most Americans are thinking about coronavirus?
@@ -354,8 +354,8 @@ x3 = df2$Education[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table4 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table4
+cleaned.edu.table4.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
@@ -369,8 +369,8 @@ x4 = df3$New2[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table4 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table4
+cleaned.gender.table4.7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -384,8 +384,8 @@ clean1 = clean1[-c(1,2),]
 
 
 
-cleaned.income.table4 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table4
+cleaned.income.table4.7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>% 
@@ -400,8 +400,8 @@ x3 = df5$Age[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table4 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table4
+cleaned.age.table4.7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -423,8 +423,8 @@ x3 = df6$Race[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table4 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table4
+cleaned.race.table4.7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -439,8 +439,8 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table4 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table4
+cleaned.region.table4.7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 
 ```
 
@@ -462,8 +462,8 @@ x3 = df2$Education[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table5 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table5
+cleaned.edu.table5.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")
@@ -477,8 +477,8 @@ x4 = df3$New2[1:8]
 clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
-cleaned.gender.table5 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table5
+cleaned.gender.table5.7 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -492,8 +492,8 @@ clean1 = clean1[-c(1,2),]
 
 
 
-cleaned.income.table5 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-cleaned.income.table5
+cleaned.income.table5.7 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+
 
 #Age
 df5 = df1 %>%
@@ -509,8 +509,8 @@ clean1 = tibble(x1,x2,x3)
 clean1$x3 = gsub("\\s+"," ", clean1$x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.age.table5 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table5
+cleaned.age.table5.7 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
+
 
 #Race
 df6 = df1 %>%
@@ -530,8 +530,8 @@ x3 = df6$Race[9:16]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.race.table5 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table5
+cleaned.race.table5.7 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
 
 #Region
 df7 = df1 %>% 
@@ -546,7 +546,7 @@ clean1 = tibble(x1,x2,x3)
 
 clean1 = clean1[-c(1,2),]
 
-cleaned.region.table5 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-cleaned.region.table5
+cleaned.region.table5.7 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
+
 
 ```
