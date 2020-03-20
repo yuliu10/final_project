@@ -1,0 +1,60 @@
+---
+title: "format_data_example"
+author: "Kevin Oh"
+date: "3/20/2020"
+output: html_document
+---
+
+Let's say for now we have 3 data frames for our `age` demographic from week 1 (feb 2-4), week 2 (feb 9-11), and week 3 (feb 16-18).
+```{r}
+cleaned.age.table1.1
+cleaned.age.table1.2
+cleaned.age.table1.3
+```
+
+We first need to clean (every column should be the correct type) the data, and subset the data because we're not interested in all the rows/columns.
+```{r}
+
+x = cleaned.age.table1.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+  
+
+y = cleaned.age.table1.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+
+#making sure we are selecting correct data frame, and changing to the appropriate argument
+z = cleaned.age.table1.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+Now, our three data frames are in the proper format, so we can bind them by row and use pivot_longer().
+```{r}
+agedf = rbind(x, y, z) %>%
+  pivot_longer(c(-question, -week, -response), names_to = "age", values_to = "percent")
+
+ageddf
+```
+
+To create a gpplot for question 1, age 30-44:
+```{r}
+agedf %>% 
+  filter(age == "30-44", question == 1) %>%
+  ggplot(aes(x = week, y = percent, group = response)) + geom_line(aes(color = response)) + geom_point()
+```
+
