@@ -44,7 +44,7 @@ ui <- fluidPage(
               choices = unique(full_data$question), 
               selected = NULL),
   #user select their interested category from the drop down menu
-  selectInput(inputId = "catergory",
+  selectInput(inputId = "category",
               label = "Select your interested catergory: ",
               choices = unique(full_data$category_choice),
               selected = NULL),
@@ -60,9 +60,11 @@ ui <- fluidPage(
     #fixed
     fluid = FALSE))
 
-full_data %>% filter(question==1 & category_choice=="age" & category=="18-29")
+full_data3<-full_data %>% filter(question==1 & category_choice=="age" & category=="18-29") 
+ggplot(data=full_data3,aes(x=week,y=percent, group = response))+geom_point()+geom_line(aes(color=response))
 
   server <- function(input, output){
+
   #filter out the needed data
   full_data2 <- reactive({
     filter(full_data, question==input$question & category_choice==input$category & category==input$demographic)})
@@ -70,8 +72,8 @@ full_data %>% filter(question==1 & category_choice=="age" & category=="18-29")
   #output of ggplot
   output$selected_graph <- renderPlot({
     ggplot(data=full_data2(),aes(x=week,y=percent, group = response))+
-      geom_point()+geom_line(aes(color=response))
-      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of question:",input$questions))})}
+      geom_point()+geom_line(aes(color=response))+
+      ggtitle(paste("Change in the percentage of",input$demographic,"in",input$category,"toward the answer of ' ",input$question,"' "))})}
   
 shinyApp(ui = ui, server = server)
 
