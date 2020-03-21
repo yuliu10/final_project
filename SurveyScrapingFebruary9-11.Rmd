@@ -37,7 +37,7 @@ gender.1.2 = cleaned.gender.table1.2[1:4,] %>% # we only want rows 1:4 because w
   select(-x1, -Total) %>%
   #if column is character, extract the number then divide by 100 
   mutate_if(is.character, funs(parse_number(.)/100)) %>% 
-  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
   select(question, week, response, everything())
 
 
@@ -94,6 +94,13 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.race.table1.2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
 
+race.1.2 = cleaned.race.table1.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+    select(question, week, response, everything())
+
 
 #Region
 df7 = df1 %>% 
@@ -129,6 +136,13 @@ clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table2.2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+gender.2.2 = cleaned.gender.table2.2[1:5,] %>%
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
 
 
 #Income
@@ -186,6 +200,14 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.race.table2.2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
 
+race.2.2 = cleaned.race.table2.2[1:5,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+    select(question, week, response, everything())
+
+
 
 #Region
 df7 = df1 %>% 
@@ -222,6 +244,14 @@ clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table3.2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
+gender.3.2 = cleaned.gender.table3.2[1:4,] %>%
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
 
 
 #Income
@@ -279,6 +309,13 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.race.table3.2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
 
+race.3.2 = cleaned.race.table3.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+    select(question, week, response, everything())
+
 
 #Region
 df7 = df1 %>% 
@@ -324,6 +361,14 @@ clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table4.2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+
+gender.4.2 = cleaned.gender.table4.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    #if column is character, extract the number then divide by 100 
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+    select(question, week, response, everything())
 
 
 #Income
@@ -378,7 +423,13 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.race.table4.2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
-cleaned.race.table4.2
+
+race.4.2 = cleaned.race.table4.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+    select(question, week, response, everything())
 
 #Region
 df7 = df1 %>% 
@@ -415,6 +466,13 @@ clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table5.2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
+gender.5.2 = cleaned.gender.table5.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    #if column is character, extract the number then divide by 100 
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+    select(question, week, response, everything())
 
 
 #Income
@@ -470,6 +528,13 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.race.table5.2 = clean1 %>% separate(col = x3, into = c("White", "Black", "Hispanic", "Other"), sep = " ") %>% rename(Total = x2)
+
+race.5.2 = cleaned.race.table5.2[1:4,] %>%
+    mutate(response = factor(x1)) %>%
+    select(-x1, -Total) %>%
+    mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+    mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+    select(question, week, response, everything())
 
 
 #Region
