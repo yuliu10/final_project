@@ -49,6 +49,14 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table1.5 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
 
+gender.1.5 = cleaned.gender.table1.5[1:4,] %>%
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
 
 #Income
 df4 = df1 %>% unite(Income, 7:9, sep = " ")
@@ -466,8 +474,8 @@ x3 = df2$Education[1:8]
 clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
-cleaned.edu.table5 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
-cleaned.edu.table5
+cleaned.edu.table5.5 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
+
 
 #Gender
 df3 = df1 %>% separate(V3, c("New1", "New2"), sep = " ")

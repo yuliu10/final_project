@@ -32,7 +32,14 @@ clean1 = tibble(x1,x2,x3, x4)
 clean1 = clean1[-c(1,2),]
 
 cleaned.gender.table1.2 = clean1 %>% rename(Total = x2, Male = x3, Female = x4)
-cleaned.gender.table1.2
+gender.1.2 = cleaned.gender.table1.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
 
 #Income
 df4 = df1 
