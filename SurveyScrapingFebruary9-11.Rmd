@@ -45,8 +45,9 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.income.table1.2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+```
 
-
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -62,8 +63,17 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table1.2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
-
+age.1.2 = cleaned.age.table1.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.1.2
+```
 #Race
+```{r}
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
 
@@ -92,7 +102,6 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.region.table1.2 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
-
 ```
 
 2. Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?
@@ -126,8 +135,9 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.income.table2.2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+```
 
-
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -143,6 +153,17 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table2.2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.2.2 = cleaned.age.table2.2[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.2.2
+```
+
+```{r}
 
 #Race
 df6 = df1 %>%
@@ -207,8 +228,9 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.income.table3.2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+```
 
-
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -224,6 +246,17 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table3.2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.3.2 = cleaned.age.table3.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.3.2
+```
+
+```{r}
 
 #Race
 df6 = df1 %>%
@@ -297,7 +330,8 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.income.table4.2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
-
+```
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -313,7 +347,17 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table4.2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.4.2 = cleaned.age.table4.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.4.2
+```
 
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -377,8 +421,9 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.income.table5.2 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
+```
 
-
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -394,7 +439,17 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table5.2 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.5.2 = cleaned.age.table5.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.5.2
+```
 
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
