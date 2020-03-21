@@ -11,14 +11,25 @@ library(tidyverse)
 ```
 
 ```{r}
-age<-read_csv("agedf.csv")
-education<-read_csv("edudf.csv")
-gender<-read_csv("genderdf.csv")
-income<-read_csv("incomedf.csv")
-race<-read_csv("racedf.csv")
-region<-read_csv("regiondf.csv")
-catrgory_choice=c("age","education","gender","race","region","income")
-full_data<-c(age,education,gender,income,race,region)
+agedf<-read_csv("agedf.csv") %>%
+  mutate(category_choice = "age") %>%
+  rename("category"="age")
+edudf<-read_csv("edudf.csv") %>% 
+  mutate(category_choice = "education") %>%
+  rename("category"="education") 
+genderdf<-read_csv("genderdf.csv")%>% 
+  mutate(category_choice = "gender") %>%
+  rename("category"="gender") 
+incomedf<-read_csv("incomedf.csv")%>% 
+  mutate(category_choice = "income") %>%
+  rename("category"="income") 
+racedf<-read_csv("racedf.csv")%>% 
+  mutate(category_choice = "race") %>%
+  rename("category"="race") 
+regiondf<-read_csv("regiondf.csv")%>% 
+  mutate(category_choice = "region") %>%
+  rename("category"="region") 
+full_data <- rbind(agedf,edudf,genderdf,incomedf,racedf,regiondf)
 ```
 
 ```{r}
@@ -30,12 +41,17 @@ ui <- fluidPage(
     #user select their interested from the drop down menu
     selectInput(inputId = "question",
               label = "Select your interested question: ",
-              choices = unique(category_choice), 
+              choices = unique(full_data$question), 
               selected = NULL),
   #user select their interested category from the drop down menu
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(age$question),
+              choices = unique(full_data$category_choice),
+              selected = NULL),
+  #user select their interested category from the drop down menu
+  selectInput(inputId = "demographic",
+              label = "Select your interested demographic: ",
+              choices = unique(full_data$category),
               selected = NULL)),
   #main area
   mainPanel(plotOutput("selected_graph")),
@@ -46,12 +62,12 @@ ui <- fluidPage(
 
 server <- function(input, output){
   #filter out the needed data
-  data_frame_name2 <- reactive({
-    filter(data_frame, question==input$question & category==input$category)})
+  full_data2 <- reactive({
+    filter(full_data, question==input$question & category_choice==input$category) & category=input$demographic})
   
   #output of ggplot
   output$selected_graph <- renderPlot({
-    ggplot(data=data_frame_name2,aes(x=week,y=percent, group = response))+
+    ggplot(data=full_data2,aes(x=week,y=percent, group = response))+
       geom_point()+geom_line(aes(color=response))
       ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of question:",input$questions))})}
   
