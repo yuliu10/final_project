@@ -12,6 +12,7 @@ library(tidyverse)
 
 ```{r}
 data_frame_name = read_csv("agedf.csv")
+View(data_frame_name)
 ```
 
 ```{r}
@@ -23,12 +24,12 @@ ui <- fluidPage(
     #user select their interested from the drop down menu
     selectInput(inputId = "question",
               label = "Select your instered question: ",
-              choices = unique(questions), 
+              choices = unique(data_frame_name$questions), 
               selected = NULL)),
   #user select their interested category from the drop down menu
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(reponse),
+              choices = unique(data_frame_name$category),
               selected = NULL),
   #main area
   mainPanel("Distribution", plotOutput("selected_graph")),
@@ -46,7 +47,7 @@ server <- function(input, output){
   output$selected_graph <- renderPlot({
     ggplot(data=data_frame_name2,aes(x=week,y=percent, group = response))+
       geom_point()+geom_line(aes(color=response))
-      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of",input$destination))})}
+      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of question:",input$questions))})}
   
 shinyApp(ui = ui, server = server)
 
