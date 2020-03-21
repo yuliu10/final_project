@@ -1,0 +1,30 @@
+---
+title: "full data frame"
+author: "Yueyan Liu (Charlene)"
+date: "3/20/2020"
+output: html_document
+---
+```{r}
+library(dplyr)
+library(tidyverse)
+
+agedf<-read_csv("agedf.csv") %>%
+  mutate(category_choice = "age") %>%
+  rename("category"="age")
+edudf<-read_csv("edudf.csv") %>% 
+  mutate(category_choice = "education") %>%
+  rename("category"="education") 
+genderdf<-read_csv("genderdf.csv")%>% 
+  mutate(category_choice = "gender") %>%
+  rename("category"="gender") 
+incomedf<-read_csv("incomedf.csv")%>% 
+  mutate(category_choice = "income") %>%
+  rename("category"="income") 
+racedf<-read_csv("racedf.csv")%>% 
+  mutate(category_choice = "race") %>%
+  rename("category"="race") 
+regiondf<-read_csv("regiondf.csv")%>% 
+  mutate(category_choice = "region") %>%
+  rename("category"="region") 
+full_data <- rbind(agedf,edudf,genderdf,incomedf,racedf,regiondf)
+```
