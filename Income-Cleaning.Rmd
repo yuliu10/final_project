@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Income-Cleaning"
 author: "Yueyan Liu (Charlene)"
@@ -624,5 +623,5 @@ incomedf = rbind(income.1.1, income.2.1, income.3.1, income.4.1, income.5.1, inc
   pivot_longer(c(-question, -week, -response), names_to = "income", values_to = "percent")
 
 incomedf
->>>>>>> dddeb61d14c20a3e81c9fd668fbed7aa815dcb36
+
 ```
