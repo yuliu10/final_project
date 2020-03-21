@@ -1,5 +1,7 @@
 # final_project
 
+Layered Input: https://sites.temple.edu/psmgis/2017/07/26/r-shiny-task-create-an-input-select-box-that-is-dependent-on-a-previous-input-choice/
+
 Link to example with dropbox toggles: https://gist.github.com/dgrapov/dfcf6ab2339b1cf19b090cfb8dadc855
 
 
