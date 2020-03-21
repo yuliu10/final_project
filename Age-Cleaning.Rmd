@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Age cleaned"
 author: "Yueyan Liu (Charlene)"
@@ -6,12 +7,6 @@ output: html_document
 ---
 ##Feb 2-4 (Week 1)
 ```{r}
-
-library(dplyr)
-library(shiny)
-library(tidyverse)
-
-
 age.1.1 = cleaned.age.table1.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
   mutate(response = factor(x1)) %>%
   select(-x1, -Total) %>%
@@ -320,3 +315,321 @@ agedf = rbind(age.1.1, age.2.1, age.3.1, age.4.1, age.5.1, age.1.2, age.2.2, age
 
 agedf
 ```
+=======
+---
+title: "Age cleaned"
+author: "Yueyan Liu (Charlene)"
+date: "3/20/2020"
+output: html_document
+---
+##Feb 2-4 (Week 1)
+```{r}
+age.1.1 = cleaned.age.table1.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+
+age.2.1 = cleaned.age.table2.1[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.1 = cleaned.age.table3.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.1 = cleaned.age.table4.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.1 = cleaned.age.table5.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+###Feb 9-11 (Week 2)
+```{r}
+age.1.2 = cleaned.age.table1.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.2 = cleaned.age.table2.2[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.2 = cleaned.age.table3.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.2 = cleaned.age.table4.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.2 = cleaned.age.table5.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(2, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+##Feb 16-18 (Week 3)
+
+```{r}
+age.1.3 = cleaned.age.table1.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.3 = cleaned.age.table2.3[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.3 = cleaned.age.table3.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.3 = cleaned.age.table4.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.3 = cleaned.age.table5.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+###Feb 23-25 (Week 4)
+```{r}
+age.1.4 = cleaned.age.table1.4[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(4, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.4 = cleaned.age.table2.4[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(4, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.4 = cleaned.age.table3.4[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(4, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.4 = cleaned.age.table4.4[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(4, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.4 = cleaned.age.table5.4[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(4, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+###Mar 1-3 (Week 5)
+```{r}
+age.1.5 = cleaned.age.table1.5[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.5 = cleaned.age.table2.5[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.5 = cleaned.age.table3.5[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.5 = cleaned.age.table4.5[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.5 = cleaned.age.table5.5[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(5, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+###Mar 8-20 (Week 6)
+```{r}
+age.1.6 = cleaned.age.table1.6[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(6, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.6 = cleaned.age.table2.6[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(6, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.6 = cleaned.age.table3.6[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(6, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.6 = cleaned.age.table4.6[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(6, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.6 = cleaned.age.table5.6[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(6, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+###Mar 15-17 (Week 7)
+```{r}
+age.1.7 = cleaned.age.table1.7[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(7, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.2.7 = cleaned.age.table2.7[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(7, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.3.7 = cleaned.age.table3.7[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(7, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.4.7 = cleaned.age.table4.7[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(7, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+
+age.5.7 = cleaned.age.table5.7[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(7, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+```
+
+#Now, our three data frames are in the proper format, so we can bind them by row and use pivot_longer().
+```{r}
+agedf = rbind(age.1.1, age.2.1, age.3.1, age.4.1, age.5.1, age.1.2, age.2.2, age.3.2, age.4.2, age.5.2, age.1.3, age.2.3, age.3.3, age.4.3, age.5.3, age.1.4, age.2.4, age.3.4, age.4.4, age.5.4, age.1.5, age.2.5, age.3.5, age.4.5, age.5.5, age.1.6, age.2.6, age.3.6, age.4.6, age.5.6, age.1.7, age.2.7, age.3.7, age.4.7, age.5.7) %>%
+  pivot_longer(c(-question, -week, -response), names_to = "age", values_to = "percent")
+
+agedf
+```
+>>>>>>> dddeb61d14c20a3e81c9fd668fbed7aa815dcb36
