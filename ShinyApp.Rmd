@@ -29,7 +29,13 @@ racedf<-read_csv("racedf.csv")%>%
 regiondf<-read_csv("regiondf.csv")%>% 
   mutate(category_choice = "region") %>%
   rename("category"="region") 
-full_data <- rbind(agedf,edudf,genderdf,incomedf,racedf,regiondf)
+full_data <- rbind(agedf,edudf,genderdf,incomedf,racedf,regiondf) %>% 
+  mutate(question = case_when(
+    question==1 ~ "How closely are you following the news about coronavirus?",
+    question==2 ~ "Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?",
+    question==3 ~ "How concerned are you about a coronavirus epidemic here in the United States?",
+    question==4 ~ "How would you describe the way most Americans are thinking about coronavirus?",
+    TRUE~"Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?"))
 ```
 
 ```{r}
