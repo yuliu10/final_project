@@ -35,7 +35,7 @@ ui <- fluidPage(
             
             selectInput(inputId = "category",
                         label = "Select your category: ",
-                        choices = list("x", "y"), #i need to fix this
+                        choices = , #i need to fix this
                         selected = NULL) 
         ),
         
@@ -50,7 +50,11 @@ ui <- fluidPage(
 
 
 server <- function(input, output){
-    
+    observe({
+        #Allow only destination choices that have flights coming from selected origin
+        updateSelectInput(session, "category", choices = unique(x[[demographic]][[4]])
+        )
+    })
     
     #filter out the needed data
     df <- reactive({
