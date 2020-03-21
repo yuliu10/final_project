@@ -60,9 +60,6 @@ ui <- fluidPage(
     #fixed
     fluid = FALSE))
 
-full_data3<-full_data %>% filter(question==1 & category_choice=="age" & category=="18-29") 
-ggplot(data=full_data3,aes(x=week,y=percent, group = response))+geom_point()+geom_line(aes(color=response))
-
   server <- function(input, output){
 
   #filter out the needed data
