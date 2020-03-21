@@ -6,45 +6,54 @@ output: html_document
 ---
 ```{r}
 library(shiny)
+library(dplyr)
 library(tidyverse)
 ```
+
+```{r}
+age<-read_csv("agedf.csv")
+education<-read_csv("edudf.csv")
+gender<-read_csv("genderdf.csv")
+income<-read_csv("incomedf.csv")
+race<-read_csv("racedf.csv")
+region<-read_csv("regiondf.csv")
+catrgory_choice=c("age","education","gender","race","region","income")
+full_data<-c(age,education,gender,income,race,region)
+```
+
 ```{r}
 ui <- fluidPage(
-  
   #create a layout
   sidebarLayout(
-    #sidebar
+    #sidebar area
   sidebarPanel(
-    #user select input of question
+    #user select their interested from the drop down menu
     selectInput(inputId = "question",
-              label = "Select your instered question: ",
-              choices = unique(questions),
-              selected = NULL)),
-  #user select input of category
+              label = "Select your interested question: ",
+              choices = unique(category_choice), 
+              selected = NULL),
+  #user select their interested category from the drop down menu
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(),
-              selected = NULL),
-  #main
-  mainPanel(
-    tabsetPanel(
-      tabPanel("Distribution", plotOutput("selected_graph")),
+              choices = unique(age$question),
+              selected = NULL)),
+  #main area
+  mainPanel(plotOutput("selected_graph")),
     #position of sidebar
     position = c("left"),
     #fixed
-    fluid = FALSE))))
+    fluid = FALSE))
 
-server <- function(input, output) {
-  
+server <- function(input, output){
   #filter out the needed data
   data_frame_name2 <- reactive({
-    filter(data_frame_name, question==input$question & category==input$category)})
+    filter(data_frame, question==input$question & category==input$category)})
   
   #output of ggplot
   output$selected_graph <- renderPlot({
-    ggplot(data=data_frame_name,aes(x=week,y=percent, group = response))+
+    ggplot(data=data_frame_name2,aes(x=week,y=percent, group = response))+
       geom_point()+geom_line(aes(color=response))
-      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of",input$destination))})
+      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of question:",input$questions))})}
   
 shinyApp(ui = ui, server = server)
 
