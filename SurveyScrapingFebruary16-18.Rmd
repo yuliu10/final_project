@@ -63,6 +63,15 @@ clean1 = clean1[-c(1,2),]
 cleaned.age.table1.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table1.3
 
+age.1.3 = cleaned.age.table1.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.1.3
+
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -141,6 +150,14 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table2.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.2.3 = cleaned.age.table2.3[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.2.3
 
 #Race
 df6 = df1 %>%
@@ -222,6 +239,14 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table3.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.3.3 = cleaned.age.table3.2[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.3.3
 
 #Race
 df6 = df1 %>%
@@ -313,6 +338,15 @@ clean1 = clean1[-c(1,2),]
 cleaned.age.table4.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table4.3
 
+age.4.3 = cleaned.age.table4.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.4.3
+
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -393,6 +427,14 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table5.3 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 
+age.5.3 = cleaned.age.table5.3[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(3, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.5.3
 
 #Race
 df6 = df1 %>%
