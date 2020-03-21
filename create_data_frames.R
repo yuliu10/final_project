@@ -1,4 +1,4 @@
-agedf = rbinb(age.1.1, age.1.2 ,age.1.3, age.1.4, age.1.5, age.1.6, age.1.7, age.2.1, age.2.2, age.2.3, age.2.4,
+agedf = rbind(age.1.1, age.1.2 ,age.1.3, age.1.4, age.1.5, age.1.6, age.1.7, age.2.1, age.2.2, age.2.3, age.2.4,
       age.2.5, age.2.6, age.2.7, age.3.1, age.3.2, age.3.3, age.3.4, age.3.5, age.3.6, age.3.7, age.4.1,
       age.4.2, age.4.3, age.4.4, age.4.5, age.4.6, age.4.7, age.5.1, age.5.2 ,age.5.3, age.5.4, age.5.5,
       age.5.6, age.5.7) %>%
@@ -8,7 +8,7 @@ genderdf = rbind(gender.1.1, gender.1.2, gender.1.3, gender.1.4, gender.1.5, gen
             gender.2.3,gender.2.4, gender.2.5, gender.2.6, gender.2.7, gender.3.1, gender.3.2, gender.3.3,
             gender.3.4, gender.3.5, gender.3.6, gender.3.7, gender.4.1, gender.4.2, gender.4.3, gender.4.4,
             gender.4.5, gender.4.6, gender.4.7, gender.5.1, gender.5.2, gender.5.3, gender.5.4, gender.5.5,
-            gender.5.6, gender.5.7)% >%
+            gender.5.6, gender.5.7) %>%
   pivot_longer(c(-question, -week, -response), names_to = "gender", values_to = "percent")
 
 edudf = rbind(edu.1.5, edu.1.6, edu.1.7, edu.2.5, edu.2.6, edu.2.7, edu.3.5, edu.3.6, edu.3.7, edu.4.5,
