@@ -46,7 +46,9 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.income.table1.1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table1.1
+```
 
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -63,6 +65,17 @@ clean1 = clean1[-c(1,2),]
 cleaned.age.table1.1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table1.1
 
+age.1.1 = cleaned.age.table1.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(1, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.1.1
+```
+
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -127,7 +140,9 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.income.table2.1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table2.1
+```
 
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -142,8 +157,18 @@ clean1 = tibble(x1,x2,x3)
 clean1 = clean1[-c(1,2),]
 
 cleaned.age.table2.1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
-cleaned.age.table2.1
 
+age.2.1 = cleaned.age.table2.1[1:5,] %>% # we only want rows 1:5 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(2, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.2.1
+```
+
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -208,7 +233,9 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.income.table3.1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table3.1
+```
 
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -225,6 +252,17 @@ clean1 = clean1[-c(1,2),]
 cleaned.age.table3.1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table3.1
 
+age.3.1 = cleaned.age.table3.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(3, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.3.1
+```
+
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -298,7 +336,9 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.income.table4.1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table4.1
+```
 
+```{r}
 #Age
 df5 = df1 %>% 
   unite(Age, c(5,6), sep = " ")
@@ -313,6 +353,18 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.age.table4.1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table4.1
+
+age.4.1 = cleaned.age.table4.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(4, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.4.1
+```
+
+```{r}
 
 #Race
 df6 = df1 %>%
@@ -378,7 +430,9 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.income.table5.1 = clean1 %>% separate(col = x3, into = c("Under $50k", "$50-100K", "$100K or more"), sep = " ") %>% rename(Total = x2)
 cleaned.income.table5.1
+```
 
+```{r}
 #Age
 df5 = df1 %>% 
   separate(V4, c("New1", "New2"), sep = " ") %>% 
@@ -395,6 +449,17 @@ clean1 = clean1[-c(1,2),]
 cleaned.age.table5.1 = clean1 %>% separate(col = x3, into = c("18-29", "30-44", "45-64", "65+"), sep = " ") %>% rename(Total = x2)
 cleaned.age.table5.1
 
+age.5.1 = cleaned.age.table5.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
+  mutate(response = factor(x1)) %>%
+  select(-x1, -Total) %>%
+  #if column is character, extract the number then divide by 100 
+  mutate_if(is.character, funs(parse_number(.)/100)) %>% 
+  mutate(week = as.integer(rep(1, nrow(.))), question = as.integer(rep(5, nrow(.)))) %>%
+  select(question, week, response, everything())
+age.5.1
+```
+
+```{r}
 #Race
 df6 = df1 %>%
   unite(Race, c(V8, V9, V10), sep = " ")
@@ -426,23 +491,3 @@ clean1 = clean1[-c(1,2),]
 cleaned.region.table5.1 = clean1 %>% separate(col = x3, into = c("Northeast", "Midwest", "South", "West"), sep = " ") %>% rename(Total = x2)
 cleaned.region.table5.1
 ```
-
-```{r}
-survey1list = list(cleaned.age.table1, cleaned.gender.table1, cleaned.income.table1, cleaned.race.table1, cleaned.region.table1, cleaned.age.table2, cleaned.gender.table2, cleaned.income.table2, cleaned.race.table2, cleaned.region.table2, cleaned.age.table3, cleaned.gender.table3, cleaned.income.table3, cleaned.race.table3, cleaned.region.table3, cleaned.age.table4, cleaned.gender.table4, cleaned.income.table4, cleaned.race.table4, cleaned.region.table4, cleaned.age.table5, cleaned.gender.table5, cleaned.income.table5, cleaned.race.table5, cleaned.region.table5)
-
-survey1list[[1]]
-
-#or
-names(survey1list) = c("cleaned.age.table1", "cleaned.gender.table1", "cleaned.income.table1", "cleaned.race.table1", "cleaned.region.table1", "cleaned.age.table2", "cleaned.gender.table2", "cleaned.income.table2", "cleaned.race.table2", "cleaned.region.table2", "cleaned.age.table3", "cleaned.gender.table3", "cleaned.income.table3", "cleaned.race.table3", "cleaned.region.table3", "cleaned.age.table4", "cleaned.gender.table4", "cleaned.income.table4", "cleaned.race.table4", "cleaned.region.table4", "cleaned.age.table5", "cleaned.gender.table5", "cleaned.income.table5", "cleaned.race.table5", "cleaned.region.table5")
-
-survey1list$cleaned.age.table1
-
-cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)] = 
-  map_dfc(cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)], parse_number) / 100
-
-a<-cleaned.age.table1.1[1:nrow(cleaned.age.table1.1) - 1, 2:nrow(cleaned.age.table1.1)]
-
-
-ggplot(a, aes(x=names(a),y=a$`18-29`))+geom_point()+geom_line()
-```
-

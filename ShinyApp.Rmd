@@ -15,18 +15,16 @@ ui <- fluidPage(
   sidebarLayout(
     #sidebar
   sidebarPanel(
-    #user select input of origin
+    #user select input of question
+    selectInput(inputId = "question",
+              label = "Select your instered question: ",
+              choices = unique(questions),
+              selected = NULL)),
+  #user select input of category
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(colnames(df1)),
-              selected = NULL),
-  
-  #user select input of destination
-  selectInput(inputId = "question",
-              label = "Select your instered question: ",
               choices = unique(),
-              selected = NULL)),
-  
+              selected = NULL),
   #main
   mainPanel(
     tabsetPanel(
@@ -37,7 +35,17 @@ ui <- fluidPage(
     fluid = FALSE))))
 
 server <- function(input, output) {
-}
-
+  
+  #filter out flights
+  flights2 <- reactive({
+    filter(data_frame_name, question==input$question & category==input$category)})
+  
+  #output of ggplot
+  output$selected_graph <- renderPlot({
+    ggplot(data=data_frame_name,aes(x=week,y=percent, group = response))+
+      geom_point()+geom_line(aes(color=response))
+      ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of",input$destination))})
+  
 shinyApp(ui = ui, server = server)
+
 ```
