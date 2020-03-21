@@ -1,85 +1,72 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
+library(tidyverse)
 
-# Define UI for application that draws a histogram
+question_choice = list("How closely are you following the news about coronavirus?" = 1,
+                       "Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?" = 2,
+                       "How concerned are you about a coronavirus epidemic here in the United States?" = 3,
+                       "How closely are you following the news about coronavirus?" = 4,
+                       "Taking into consideration both your risk of contracting it and the seriousness of the illness,
+                 how worried are you personally about experiencing coronavirus?" = 5
+)
+
+demographic_choice = list("Age" = 1, "Education" = 2, "Gender" = 3, "Income" = 4, "Race" = 5, "Region" = 6)
+
+
+x = list(agedf, edudf, genderdf, incomedf, racedf, regiondf)
+
+
 ui <- fluidPage(
     
-    titlePanel("YouGov Poll Results"),
-    
-    
-    navlistPanel(
+    #create a layout
+    sidebarLayout(
+        #sidebar
+        sidebarPanel(
+            #user select input of question
+            selectInput(inputId = "question",
+                        label = "Select your question: ",
+                        choices = question_choice,
+                        selected = NULL),
+            
+            #user select input of category
+            selectInput(inputId = "demographic",
+                        label = "Select your demographic: ",
+                        choices = demographic_choice,
+                        selected = NULL),
+            
+            selectInput(inputId = "category",
+                        label = "Select your category: ",
+                        choices = , #i need to fix this
+                        selected = NULL) 
+        ),
         
-        tabPanel("Question 1",
-                 # Application title
-                 titlePanel("How closely are you following the news about coronavirus?"),
-                 plotOutput("distPlot")
-                    
-                 
-                 ),
-        tabPanel("Question 2",
-                 titlePanel("Do you approve or disapprove of Donald Trump’s handling of the coronavirus outbreak?"),
-                 plotOutput("distPlot2")
-                 ),
         
-        tabPanel("Question 3",
-                 titlePanel("How concerned are you about a coronavirus epidemic here in the United States?"),
-                 plotOutput("distPlot2")
-                 ),
         
-        tabPanel("Question 4",
-                 titlePanel("How closely are you following the news about coronavirus?"),
-                 plotOutput("distPlot")
-                 
-                 ),
-        
-        tabPanel("Question 5",
-                 titlePanel("Taking into consideration both your risk of contracting it and the seriousness of the illness, how worried are you personally about experiencing coronavirus?"),
-                 plotOutput("distPlot")
-                 )
-    ),
-    
-    selectInput("select", label = h3("Select Category"), 
-                choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3), 
-                selected = 1),,
-
-    
+        #main
+        mainPanel(
+            plotOutput("selected_graph")
+        )
+    )
 )
 
 
-server <- function(input, output) {
-
-    output$lineQ1 <- renderPlot({
-        
-        
-
-        
-        
+server <- function(input, output){
+    observe({
+        #Allow only destination choices that have flights coming from selected origin
+        updateSelectInput(session, "category", choices = unique(x[[demographic]][[4]])
+        )
     })
     
-    output$lineQ2 <- renderPlot({
-        
-    })
+    #filter out the needed data
+    df <- reactive({
+        x[demographic] %>%
+            filter(question == input$question, .[4] == input$category)})
     
-    output$lineQ3 <- renderPlot({
-        
-    })
-    
-    output$lineQ4 <- renderPlot({
-        
-    })
-    
-    output$lineQ5 <- renderPlot({
-        
-    })
+    #output of ggplot
+    output$selected_graph <- renderPlot({
+        ggplot(df, aes(x = week, y = percent, group = response)) +
+            geom_point() + geom_line(aes(color=response))
+        ggtitle(paste("Proportional Changes in Answer Based on ", input$category,"of",input$destination))})
 }
 
-# Run the application 
+
 shinyApp(ui = ui, server = server)
