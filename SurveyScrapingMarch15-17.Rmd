@@ -164,7 +164,7 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.edu.table2.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
 
-edu.2.7 = cleaned.region.table2.7[1:5,] %>%
+edu.2.7 = cleaned.edu.table2.7[1:5,] %>%
     mutate(response = factor(x1)) %>%
     select(-x1, -Total) %>%
     mutate_if(is.character, funs(parse_number(.)/100)) %>% 
@@ -299,7 +299,7 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.edu.table3.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
 
-edu.3.7 = cleaned.region.table3.7[1:4,] %>%
+edu.3.7 = cleaned.edu.table3.7[1:4,] %>%
     mutate(response = factor(x1)) %>%
     select(-x1, -Total) %>%
     mutate_if(is.character, funs(parse_number(.)/100)) %>% 
@@ -441,7 +441,7 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.edu.table4.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
 
-edu.4.7 = cleaned.region.table4.7[1:4,] %>%
+edu.4.7 = cleaned.edu.table4.7[1:4,] %>%
     mutate(response = factor(x1)) %>%
     select(-x1, -Total) %>%
     mutate_if(is.character, funs(parse_number(.)/100)) %>% 
@@ -577,7 +577,7 @@ clean1 = clean1[-c(1,2),]
 
 cleaned.edu.table5.7 = clean1 %>% separate(col = x3, into = c("HS or less", "Some college", "College Grad", "Postgrad"), sep = " ") %>% rename(Total = x2)
 
-edu.5.7 = cleaned.region.table5.7[1:4,] %>%
+edu.5.7 = cleaned.edu.table5.7[1:4,] %>%
     mutate(response = factor(x1)) %>%
     select(-x1, -Total) %>%
     mutate_if(is.character, funs(parse_number(.)/100)) %>% 
