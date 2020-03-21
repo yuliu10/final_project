@@ -1,0 +1,285 @@
+"question","week","response","gender","percent"
+1,1,"Very closely","Male",0.24
+1,1,"Very closely","Female",0.21
+1,1,"Somewhat closely","Male",0.42
+1,1,"Somewhat closely","Female",0.5
+1,1,"Not very closely","Male",0.24
+1,1,"Not very closely","Female",0.21
+1,1,"Not following at all","Male",0.1
+1,1,"Not following at all","Female",0.09
+1,2,"Very closely","Male",0.25
+1,2,"Very closely","Female",0.25
+1,2,"Somewhat closely","Male",0.44
+1,2,"Somewhat closely","Female",0.45
+1,2,"Not very closely","Male",0.2
+1,2,"Not very closely","Female",0.21
+1,2,"Not following at all","Male",0.11
+1,2,"Not following at all","Female",0.09
+1,3,"Very closely","Male",0.21
+1,3,"Very closely","Female",0.24
+1,3,"Somewhat closely","Male",0.48
+1,3,"Somewhat closely","Female",0.45
+1,3,"Not very closely","Male",0.24
+1,3,"Not very closely","Female",0.24
+1,3,"Not following at all","Male",0.07
+1,3,"Not following at all","Female",0.07
+1,4,"Very closely","Male",0.24
+1,4,"Very closely","Female",0.24
+1,4,"Somewhat closely","Male",0.45
+1,4,"Somewhat closely","Female",0.47
+1,4,"Not very closely","Male",0.24
+1,4,"Not very closely","Female",0.19
+1,4,"Not following at all","Male",0.07
+1,4,"Not following at all","Female",0.1
+1,5,"Very closely","Male",0.35
+1,5,"Very closely","Female",0.37
+1,5,"Somewhat closely","Male",0.42
+1,5,"Somewhat closely","Female",0.41
+1,5,"Not very closely","Male",0.13
+1,5,"Not very closely","Female",0.16
+1,5,"Not following at all","Male",0.09
+1,5,"Not following at all","Female",0.06
+1,6,"Very closely","Male",0.35
+1,6,"Very closely","Female",0.37
+1,6,"Somewhat closely","Male",0.45
+1,6,"Somewhat closely","Female",0.42
+1,6,"Not very closely","Male",0.14
+1,6,"Not very closely","Female",0.15
+1,6,"Not following at all","Male",0.06
+1,6,"Not following at all","Female",0.06
+1,7,"Very closely","Male",0.41
+1,7,"Very closely","Female",0.46
+1,7,"Somewhat closely","Male",0.46
+1,7,"Somewhat closely","Female",0.43
+1,7,"Not very closely","Male",0.11
+1,7,"Not very closely","Female",0.09
+1,7,"Not following at all","Male",0.02
+1,7,"Not following at all","Female",0.02
+2,2,"Strongly approve","Male",0.26
+2,2,"Strongly approve","Female",0.19
+2,2,"Somewhat approve","Male",0.17
+2,2,"Somewhat approve","Female",0.17
+2,2,"Somewhat disapprove","Male",0.12
+2,2,"Somewhat disapprove","Female",0.12
+2,2,"Strongly disapprove","Male",0.17
+2,2,"Strongly disapprove","Female",0.16
+2,2,"Not sure","Male",0.29
+2,2,"Not sure","Female",0.36
+2,3,"Strongly approve","Male",0.25
+2,3,"Strongly approve","Female",0.19
+2,3,"Somewhat approve","Male",0.18
+2,3,"Somewhat approve","Female",0.16
+2,3,"Somewhat disapprove","Male",0.09
+2,3,"Somewhat disapprove","Female",0.1
+2,3,"Strongly disapprove","Male",0.21
+2,3,"Strongly disapprove","Female",0.23
+2,3,"Not sure","Male",0.26
+2,3,"Not sure","Female",0.32
+2,4,"Strongly approve","Male",0.25
+2,4,"Strongly approve","Female",0.19
+2,4,"Somewhat approve","Male",0.18
+2,4,"Somewhat approve","Female",0.16
+2,4,"Somewhat disapprove","Male",0.09
+2,4,"Somewhat disapprove","Female",0.13
+2,4,"Strongly disapprove","Male",0.2
+2,4,"Strongly disapprove","Female",0.21
+2,4,"Not sure","Male",0.28
+2,4,"Not sure","Female",0.32
+2,5,"Strongly approve","Male",0.26
+2,5,"Strongly approve","Female",0.21
+2,5,"Somewhat approve","Male",0.14
+2,5,"Somewhat approve","Female",0.14
+2,5,"Somewhat disapprove","Male",0.12
+2,5,"Somewhat disapprove","Female",0.11
+2,5,"Strongly disapprove","Male",0.32
+2,5,"Strongly disapprove","Female",0.39
+2,5,"Not sure","Male",0.15
+2,5,"Not sure","Female",0.16
+2,6,"Strongly approve","Male",0.3
+2,6,"Strongly approve","Female",0.22
+2,6,"Somewhat approve","Male",0.18
+2,6,"Somewhat approve","Female",0.15
+2,6,"Somewhat disapprove","Male",0.08
+2,6,"Somewhat disapprove","Female",0.09
+2,6,"Strongly disapprove","Male",0.34
+2,6,"Strongly disapprove","Female",0.36
+2,6,"Not sure","Male",0.11
+2,6,"Not sure","Female",0.18
+2,7,"Strongly approve","Male",0.25
+2,7,"Strongly approve","Female",0.25
+2,7,"Somewhat approve","Male",0.2
+2,7,"Somewhat approve","Female",0.21
+2,7,"Somewhat disapprove","Male",0.14
+2,7,"Somewhat disapprove","Female",0.16
+2,7,"Strongly disapprove","Male",0.35
+2,7,"Strongly disapprove","Female",0.28
+2,7,"Not sure","Male",0.06
+2,7,"Not sure","Female",0.1
+3,1,"Very concerned","Male",0.18
+3,1,"Very concerned","Female",0.18
+3,1,"Somewhat concerned","Male",0.38
+3,1,"Somewhat concerned","Female",0.5
+3,1,"Not very concerned","Male",0.32
+3,1,"Not very concerned","Female",0.25
+3,1,"Not concerned at all","Male",0.12
+3,1,"Not concerned at all","Female",0.07
+3,2,"Very concerned","Male",0.2
+3,2,"Very concerned","Female",0.21
+3,2,"Somewhat concerned","Male",0.35
+3,2,"Somewhat concerned","Female",0.46
+3,2,"Not very concerned","Male",0.32
+3,2,"Not very concerned","Female",0.23
+3,2,"Not concerned at all","Male",0.13
+3,2,"Not concerned at all","Female",0.09
+3,3,"Very concerned","Male",0.15
+3,3,"Very concerned","Female",0.2
+3,3,"Somewhat concerned","Male",0.4
+3,3,"Somewhat concerned","Female",0.45
+3,3,"Not very concerned","Male",0.36
+3,3,"Not very concerned","Female",0.27
+3,3,"Not concerned at all","Male",0.1
+3,3,"Not concerned at all","Female",0.08
+3,4,"Very concerned","Male",0.16
+3,4,"Very concerned","Female",0.26
+3,4,"Somewhat concerned","Male",0.4
+3,4,"Somewhat concerned","Female",0.45
+3,4,"Not very concerned","Male",0.31
+3,4,"Not very concerned","Female",0.23
+3,4,"Not concerned at all","Male",0.13
+3,4,"Not concerned at all","Female",0.06
+3,5,"Very concerned","Male",0.22
+3,5,"Very concerned","Female",0.29
+3,5,"Somewhat concerned","Male",0.4
+3,5,"Somewhat concerned","Female",0.44
+3,5,"Not very concerned","Male",0.26
+3,5,"Not very concerned","Female",0.2
+3,5,"Not concerned at all","Male",0.12
+3,5,"Not concerned at all","Female",0.08
+3,6,"Very concerned","Male",0.22
+3,6,"Very concerned","Female",0.31
+3,6,"Somewhat concerned","Male",0.4
+3,6,"Somewhat concerned","Female",0.4
+3,6,"Not very concerned","Male",0.27
+3,6,"Not very concerned","Female",0.22
+3,6,"Not concerned at all","Male",0.12
+3,6,"Not concerned at all","Female",0.07
+3,7,"Very concerned","Male",0.35
+3,7,"Very concerned","Female",0.34
+3,7,"Somewhat concerned","Male",0.42
+3,7,"Somewhat concerned","Female",0.44
+3,7,"Not very concerned","Male",0.18
+3,7,"Not very concerned","Female",0.18
+3,7,"Not concerned at all","Male",0.05
+3,7,"Not concerned at all","Female",0.04
+4,1,"They are not taking the risks serious enough","Male",0.22
+4,1,"They are not taking the risks serious enough","Female",0.21
+4,1,"They are behaving appropriately","Male",0.39
+4,1,"They are behaving appropriately","Female",0.42
+4,1,"They are overreacting to the actual risks of contracting the virus","Male",0.16
+4,1,"They are overreacting to the actual risks of contracting the virus","Female",0.13
+4,1,"Not sure","Male",0.23
+4,1,"Not sure","Female",0.23
+4,2,"They are not taking the risks seriously enough","Male",0.25
+4,2,"They are not taking the risks seriously enough","Female",0.25
+4,2,"They are behaving appropriately","Male",0.4
+4,2,"They are behaving appropriately","Female",0.41
+4,2,"They are overreacting to the actual risks of contracting the virus","Male",0.19
+4,2,"They are overreacting to the actual risks of contracting the virus","Female",0.14
+4,2,"Not sure","Male",0.16
+4,2,"Not sure","Female",0.2
+4,3,"They are not taking the risks seriously enough","Male",0.16
+4,3,"They are not taking the risks seriously enough","Female",0.23
+4,3,"They are behaving appropriately","Male",0.42
+4,3,"They are behaving appropriately","Female",0.42
+4,3,"They are overreacting to the actual risks of contracting the virus","Male",0.22
+4,3,"They are overreacting to the actual risks of contracting the virus","Female",0.15
+4,3,"Not sure","Male",0.19
+4,3,"Not sure","Female",0.2
+4,4,"They are not taking the risks seriously enough","Male",0.25
+4,4,"They are not taking the risks seriously enough","Female",0.31
+4,4,"They are behaving appropriately","Male",0.41
+4,4,"They are behaving appropriately","Female",0.36
+4,4,"They are overreacting to the actual risks of contracting the virus","Male",0.17
+4,4,"They are overreacting to the actual risks of contracting the virus","Female",0.16
+4,4,"Not sure","Male",0.17
+4,4,"Not sure","Female",0.17
+4,5,"They are not taking the risks seriously enough","Male",0.21
+4,5,"They are not taking the risks seriously enough","Female",0.24
+4,5,"They are behaving appropriately","Male",0.29
+4,5,"They are behaving appropriately","Female",0.29
+4,5,"They are overreacting to the actual risks of contracting the virus","Male",0.34
+4,5,"They are overreacting to the actual risks of contracting the virus","Female",0.25
+4,5,"Not sure","Male",0.15
+4,5,"Not sure","Female",0.22
+4,6,"They are not taking the risks seriously enough","Male",0.17
+4,6,"They are not taking the risks seriously enough","Female",0.19
+4,6,"They are behaving appropriately","Male",0.28
+4,6,"They are behaving appropriately","Female",0.24
+4,6,"They are overreacting to the actual risks of contracting the virus","Male",0.41
+4,6,"They are overreacting to the actual risks of contracting the virus","Female",0.41
+4,6,"Not sure","Male",0.13
+4,6,"Not sure","Female",0.16
+4,7,"They are not taking the risks seriously enough","Male",0.23
+4,7,"They are not taking the risks seriously enough","Female",0.18
+4,7,"They are behaving appropriately","Male",0.24
+4,7,"They are behaving appropriately","Female",0.24
+4,7,"They are overreacting to the actual risks of contracting the virus","Male",0.41
+4,7,"They are overreacting to the actual risks of contracting the virus","Female",0.48
+4,7,"Not sure","Male",0.12
+4,7,"Not sure","Female",0.1
+5,1,"Very worried","Male",0.14
+5,1,"Very worried","Female",0.11
+5,1,"Somewhat worried","Male",0.21
+5,1,"Somewhat worried","Female",0.31
+5,1,"Not too worried","Male",0.43
+5,1,"Not too worried","Female",0.42
+5,1,"Not worried at all","Male",0.21
+5,1,"Not worried at all","Female",0.16
+5,2,"Very worried","Male",0.1
+5,2,"Very worried","Female",0.12
+5,2,"Somewhat worried","Male",0.26
+5,2,"Somewhat worried","Female",0.3
+5,2,"Not too worried","Male",0.39
+5,2,"Not too worried","Female",0.39
+5,2,"Not worried at all","Male",0.25
+5,2,"Not worried at all","Female",0.19
+5,3,"Very worried","Male",0.08
+5,3,"Very worried","Female",0.12
+5,3,"Somewhat worried","Male",0.26
+5,3,"Somewhat worried","Female",0.31
+5,3,"Not too worried","Male",0.43
+5,3,"Not too worried","Female",0.41
+5,3,"Not worried at all","Male",0.23
+5,3,"Not worried at all","Female",0.16
+5,4,"Very worried","Male",0.07
+5,4,"Very worried","Female",0.13
+5,4,"Somewhat worried","Male",0.28
+5,4,"Somewhat worried","Female",0.32
+5,4,"Not too worried","Male",0.4
+5,4,"Not too worried","Female",0.4
+5,4,"Not worried at all","Male",0.25
+5,4,"Not worried at all","Female",0.16
+5,5,"Very worried","Male",0.11
+5,5,"Very worried","Female",0.16
+5,5,"Somewhat worried","Male",0.31
+5,5,"Somewhat worried","Female",0.35
+5,5,"Not too worried","Male",0.35
+5,5,"Not too worried","Female",0.35
+5,5,"Not worried at all","Male",0.23
+5,5,"Not worried at all","Female",0.14
+5,6,"Very worried","Male",0.12
+5,6,"Very worried","Female",0.16
+5,6,"Somewhat worried","Male",0.34
+5,6,"Somewhat worried","Female",0.37
+5,6,"Not too worried","Male",0.36
+5,6,"Not too worried","Female",0.33
+5,6,"Not worried at all","Male",0.19
+5,6,"Not worried at all","Female",0.14
+5,7,"Very worried","Male",0.16
+5,7,"Very worried","Female",0.14
+5,7,"Somewhat worried","Male",0.42
+5,7,"Somewhat worried","Female",0.41
+5,7,"Not too worried","Male",0.31
+5,7,"Not too worried","Female",0.36
+5,7,"Not worried at all","Male",0.11
+5,7,"Not worried at all","Female",0.1

@@ -1,0 +1,589 @@
+"question","week","response","race","percent"
+1,1,"Very closely","White",0.21
+1,1,"Very closely","Black",0.24
+1,1,"Very closely","Hispanic",0.2
+1,1,"Very closely","Other",0.37
+1,1,"Somewhat closely","White",0.48
+1,1,"Somewhat closely","Black",0.47
+1,1,"Somewhat closely","Hispanic",0.42
+1,1,"Somewhat closely","Other",0.36
+1,1,"Not very closely","White",0.25
+1,1,"Not very closely","Black",0.18
+1,1,"Not very closely","Hispanic",0.22
+1,1,"Not very closely","Other",0.14
+1,1,"Not following at all","White",0.07
+1,1,"Not following at all","Black",0.12
+1,1,"Not following at all","Hispanic",0.17
+1,1,"Not following at all","Other",0.13
+1,2,"Very closely","White",0.24
+1,2,"Very closely","Black",0.24
+1,2,"Very closely","Hispanic",0.27
+1,2,"Very closely","Other",0.27
+1,2,"Somewhat closely","White",0.47
+1,2,"Somewhat closely","Black",0.4
+1,2,"Somewhat closely","Hispanic",0.37
+1,2,"Somewhat closely","Other",0.43
+1,2,"Not very closely","White",0.2
+1,2,"Not very closely","Black",0.22
+1,2,"Not very closely","Hispanic",0.23
+1,2,"Not very closely","Other",0.23
+1,2,"Not following at all","White",0.09
+1,2,"Not following at all","Black",0.15
+1,2,"Not following at all","Hispanic",0.13
+1,2,"Not following at all","Other",0.07
+1,3,"Very closely","White",0.21
+1,3,"Very closely","Black",0.34
+1,3,"Very closely","Hispanic",0.22
+1,3,"Very closely","Other",0.2
+1,3,"Somewhat closely","White",0.49
+1,3,"Somewhat closely","Black",0.38
+1,3,"Somewhat closely","Hispanic",0.44
+1,3,"Somewhat closely","Other",0.42
+1,3,"Not very closely","White",0.24
+1,3,"Not very closely","Black",0.21
+1,3,"Not very closely","Hispanic",0.25
+1,3,"Not very closely","Other",0.29
+1,3,"Not following at all","White",0.06
+1,3,"Not following at all","Black",0.07
+1,3,"Not following at all","Hispanic",0.09
+1,3,"Not following at all","Other",0.1
+1,4,"Very closely","White",0.24
+1,4,"Very closely","Black",0.19
+1,4,"Very closely","Hispanic",0.28
+1,4,"Very closely","Other",0.24
+1,4,"Somewhat closely","White",0.47
+1,4,"Somewhat closely","Black",0.45
+1,4,"Somewhat closely","Hispanic",0.43
+1,4,"Somewhat closely","Other",0.42
+1,4,"Not very closely","White",0.21
+1,4,"Not very closely","Black",0.24
+1,4,"Not very closely","Hispanic",0.21
+1,4,"Not very closely","Other",0.18
+1,4,"Not following at all","White",0.07
+1,4,"Not following at all","Black",0.12
+1,4,"Not following at all","Hispanic",0.09
+1,4,"Not following at all","Other",0.17
+1,5,"Very closely","White",0.35
+1,5,"Very closely","Black",0.47
+1,5,"Very closely","Hispanic",0.35
+1,5,"Very closely","Other",0.28
+1,5,"Somewhat closely","White",0.44
+1,5,"Somewhat closely","Black",0.37
+1,5,"Somewhat closely","Hispanic",0.37
+1,5,"Somewhat closely","Other",0.37
+1,5,"Not very closely","White",0.14
+1,5,"Not very closely","Black",0.12
+1,5,"Not very closely","Hispanic",0.17
+1,5,"Not very closely","Other",0.18
+1,5,"Not following at all","White",0.07
+1,5,"Not following at all","Black",0.04
+1,5,"Not following at all","Hispanic",0.11
+1,5,"Not following at all","Other",0.17
+1,6,"Very closely","White",0.34
+1,6,"Very closely","Black",0.47
+1,6,"Very closely","Hispanic",0.31
+1,6,"Very closely","Other",0.4
+1,6,"Somewhat closely","White",0.46
+1,6,"Somewhat closely","Black",0.34
+1,6,"Somewhat closely","Hispanic",0.42
+1,6,"Somewhat closely","Other",0.34
+1,6,"Not very closely","White",0.13
+1,6,"Not very closely","Black",0.15
+1,6,"Not very closely","Hispanic",0.19
+1,6,"Not very closely","Other",0.24
+1,6,"Not following at all","White",0.07
+1,6,"Not following at all","Black",0.03
+1,6,"Not following at all","Hispanic",0.08
+1,6,"Not following at all","Other",0.02
+1,7,"Very closely","White",0.44
+1,7,"Very closely","Black",0.45
+1,7,"Very closely","Hispanic",0.5
+1,7,"Very closely","Other",0.26
+1,7,"Somewhat closely","White",0.44
+1,7,"Somewhat closely","Black",0.45
+1,7,"Somewhat closely","Hispanic",0.41
+1,7,"Somewhat closely","Other",0.52
+1,7,"Not very closely","White",0.11
+1,7,"Not very closely","Black",0.08
+1,7,"Not very closely","Hispanic",0.07
+1,7,"Not very closely","Other",0.15
+1,7,"Not following at all","White",0.01
+1,7,"Not following at all","Black",0.02
+1,7,"Not following at all","Hispanic",0.02
+1,7,"Not following at all","Other",0.08
+2,1,"Strongly approve","White",0.28
+2,1,"Strongly approve","Black",0.1
+2,1,"Strongly approve","Hispanic",0.17
+2,1,"Strongly approve","Other",0.27
+2,1,"Somewhat approve","White",0.17
+2,1,"Somewhat approve","Black",0.12
+2,1,"Somewhat approve","Hispanic",0.21
+2,1,"Somewhat approve","Other",0.22
+2,1,"Somewhat disapprove","White",0.11
+2,1,"Somewhat disapprove","Black",0.12
+2,1,"Somewhat disapprove","Hispanic",0.1
+2,1,"Somewhat disapprove","Other",0.08
+2,1,"Strongly disapprove","White",0.15
+2,1,"Strongly disapprove","Black",0.34
+2,1,"Strongly disapprove","Hispanic",0.22
+2,1,"Strongly disapprove","Other",0.15
+2,1,"Not sure","White",0.29
+2,1,"Not sure","Black",0.32
+2,1,"Not sure","Hispanic",0.3
+2,1,"Not sure","Other",0.27
+2,2,"Strongly approve","White",0.25
+2,2,"Strongly approve","Black",0.06
+2,2,"Strongly approve","Hispanic",0.21
+2,2,"Strongly approve","Other",0.25
+2,2,"Somewhat approve","White",0.19
+2,2,"Somewhat approve","Black",0.09
+2,2,"Somewhat approve","Hispanic",0.18
+2,2,"Somewhat approve","Other",0.15
+2,2,"Somewhat disapprove","White",0.1
+2,2,"Somewhat disapprove","Black",0.14
+2,2,"Somewhat disapprove","Hispanic",0.2
+2,2,"Somewhat disapprove","Other",0.14
+2,2,"Strongly disapprove","White",0.16
+2,2,"Strongly disapprove","Black",0.22
+2,2,"Strongly disapprove","Hispanic",0.18
+2,2,"Strongly disapprove","Other",0.17
+2,2,"Not sure","White",0.31
+2,2,"Not sure","Black",0.49
+2,2,"Not sure","Hispanic",0.23
+2,2,"Not sure","Other",0.29
+2,3,"Strongly approve","White",0.24
+2,3,"Strongly approve","Black",0.09
+2,3,"Strongly approve","Hispanic",0.2
+2,3,"Strongly approve","Other",0.24
+2,3,"Somewhat approve","White",0.18
+2,3,"Somewhat approve","Black",0.08
+2,3,"Somewhat approve","Hispanic",0.19
+2,3,"Somewhat approve","Other",0.16
+2,3,"Somewhat disapprove","White",0.09
+2,3,"Somewhat disapprove","Black",0.13
+2,3,"Somewhat disapprove","Hispanic",0.11
+2,3,"Somewhat disapprove","Other",0.11
+2,3,"Strongly disapprove","White",0.2
+2,3,"Strongly disapprove","Black",0.41
+2,3,"Strongly disapprove","Hispanic",0.19
+2,3,"Strongly disapprove","Other",0.2
+2,3,"Not sure","White",0.29
+2,3,"Not sure","Black",0.29
+2,3,"Not sure","Hispanic",0.32
+2,3,"Not sure","Other",0.29
+2,4,"Strongly approve","White",0.26
+2,4,"Strongly approve","Black",0.05
+2,4,"Strongly approve","Hispanic",0.18
+2,4,"Strongly approve","Other",0.2
+2,4,"Somewhat approve","White",0.17
+2,4,"Somewhat approve","Black",0.12
+2,4,"Somewhat approve","Hispanic",0.17
+2,4,"Somewhat approve","Other",0.19
+2,4,"Somewhat disapprove","White",0.1
+2,4,"Somewhat disapprove","Black",0.17
+2,4,"Somewhat disapprove","Hispanic",0.09
+2,4,"Somewhat disapprove","Other",0.1
+2,4,"Strongly disapprove","White",0.19
+2,4,"Strongly disapprove","Black",0.29
+2,4,"Strongly disapprove","Hispanic",0.26
+2,4,"Strongly disapprove","Other",0.13
+2,4,"Not sure","White",0.28
+2,4,"Not sure","Black",0.38
+2,4,"Not sure","Hispanic",0.3
+2,4,"Not sure","Other",0.38
+2,5,"Strongly approve","White",0.28
+2,5,"Strongly approve","Black",0.07
+2,5,"Strongly approve","Hispanic",0.15
+2,5,"Strongly approve","Other",0.2
+2,5,"Somewhat approve","White",0.14
+2,5,"Somewhat approve","Black",0.05
+2,5,"Somewhat approve","Hispanic",0.17
+2,5,"Somewhat approve","Other",0.21
+2,5,"Somewhat disapprove","White",0.11
+2,5,"Somewhat disapprove","Black",0.18
+2,5,"Somewhat disapprove","Hispanic",0.08
+2,5,"Somewhat disapprove","Other",0.09
+2,5,"Strongly disapprove","White",0.33
+2,5,"Strongly disapprove","Black",0.55
+2,5,"Strongly disapprove","Hispanic",0.39
+2,5,"Strongly disapprove","Other",0.17
+2,5,"Not sure","White",0.13
+2,5,"Not sure","Black",0.15
+2,5,"Not sure","Hispanic",0.21
+2,5,"Not sure","Other",0.33
+2,6,"Strongly approve","White",0.29
+2,6,"Strongly approve","Black",0.1
+2,6,"Strongly approve","Hispanic",0.23
+2,6,"Strongly approve","Other",0.19
+2,6,"Somewhat approve","White",0.16
+2,6,"Somewhat approve","Black",0.12
+2,6,"Somewhat approve","Hispanic",0.16
+2,6,"Somewhat approve","Other",0.25
+2,6,"Somewhat disapprove","White",0.08
+2,6,"Somewhat disapprove","Black",0.11
+2,6,"Somewhat disapprove","Hispanic",0.09
+2,6,"Somewhat disapprove","Other",0.04
+2,6,"Strongly disapprove","White",0.33
+2,6,"Strongly disapprove","Black",0.5
+2,6,"Strongly disapprove","Hispanic",0.35
+2,6,"Strongly disapprove","Other",0.3
+2,6,"Not sure","White",0.13
+2,6,"Not sure","Black",0.17
+2,6,"Not sure","Hispanic",0.17
+2,6,"Not sure","Other",0.22
+2,7,"Strongly approve","White",0.3
+2,7,"Strongly approve","Black",0.08
+2,7,"Strongly approve","Hispanic",0.17
+2,7,"Strongly approve","Other",0.2
+2,7,"Somewhat approve","White",0.2
+2,7,"Somewhat approve","Black",0.15
+2,7,"Somewhat approve","Hispanic",0.26
+2,7,"Somewhat approve","Other",0.19
+2,7,"Somewhat disapprove","White",0.12
+2,7,"Somewhat disapprove","Black",0.28
+2,7,"Somewhat disapprove","Hispanic",0.18
+2,7,"Somewhat disapprove","Other",0.18
+2,7,"Strongly disapprove","White",0.3
+2,7,"Strongly disapprove","Black",0.4
+2,7,"Strongly disapprove","Hispanic",0.29
+2,7,"Strongly disapprove","Other",0.34
+2,7,"Not sure","White",0.08
+2,7,"Not sure","Black",0.09
+2,7,"Not sure","Hispanic",0.1
+2,7,"Not sure","Other",0.09
+3,1,"Very concerned","White",0.14
+3,1,"Very concerned","Black",0.32
+3,1,"Very concerned","Hispanic",0.25
+3,1,"Very concerned","Other",0.29
+3,1,"Somewhat concerned","White",0.46
+3,1,"Somewhat concerned","Black",0.44
+3,1,"Somewhat concerned","Hispanic",0.41
+3,1,"Somewhat concerned","Other",0.34
+3,1,"Not very concerned","White",0.31
+3,1,"Not very concerned","Black",0.19
+3,1,"Not very concerned","Hispanic",0.24
+3,1,"Not very concerned","Other",0.25
+3,1,"Not concerned at all","White",0.09
+3,1,"Not concerned at all","Black",0.05
+3,1,"Not concerned at all","Hispanic",0.1
+3,1,"Not concerned at all","Other",0.13
+3,2,"Very concerned","White",0.17
+3,2,"Very concerned","Black",0.27
+3,2,"Very concerned","Hispanic",0.32
+3,2,"Very concerned","Other",0.26
+3,2,"Somewhat concerned","White",0.42
+3,2,"Somewhat concerned","Black",0.41
+3,2,"Somewhat concerned","Hispanic",0.34
+3,2,"Somewhat concerned","Other",0.39
+3,2,"Not very concerned","White",0.3
+3,2,"Not very concerned","Black",0.23
+3,2,"Not very concerned","Hispanic",0.19
+3,2,"Not very concerned","Other",0.21
+3,2,"Not concerned at all","White",0.11
+3,2,"Not concerned at all","Black",0.09
+3,2,"Not concerned at all","Hispanic",0.15
+3,2,"Not concerned at all","Other",0.14
+3,3,"Very concerned","White",0.14
+3,3,"Very concerned","Black",0.36
+3,3,"Very concerned","Hispanic",0.21
+3,3,"Very concerned","Other",0.16
+3,3,"Somewhat concerned","White",0.44
+3,3,"Somewhat concerned","Black",0.32
+3,3,"Somewhat concerned","Hispanic",0.46
+3,3,"Somewhat concerned","Other",0.46
+3,3,"Not very concerned","White",0.35
+3,3,"Not very concerned","Black",0.22
+3,3,"Not very concerned","Hispanic",0.24
+3,3,"Not very concerned","Other",0.26
+3,3,"Not concerned at all","White",0.08
+3,3,"Not concerned at all","Black",0.1
+3,3,"Not concerned at all","Hispanic",0.09
+3,3,"Not concerned at all","Other",0.12
+3,4,"Very concerned","White",0.17
+3,4,"Very concerned","Black",0.32
+3,4,"Very concerned","Hispanic",0.31
+3,4,"Very concerned","Other",0.3
+3,4,"Somewhat concerned","White",0.44
+3,4,"Somewhat concerned","Black",0.4
+3,4,"Somewhat concerned","Hispanic",0.37
+3,4,"Somewhat concerned","Other",0.38
+3,4,"Not very concerned","White",0.29
+3,4,"Not very concerned","Black",0.18
+3,4,"Not very concerned","Hispanic",0.24
+3,4,"Not very concerned","Other",0.23
+3,4,"Not concerned at all","White",0.1
+3,4,"Not concerned at all","Black",0.1
+3,4,"Not concerned at all","Hispanic",0.09
+3,4,"Not concerned at all","Other",0.09
+3,5,"Very concerned","White",0.22
+3,5,"Very concerned","Black",0.38
+3,5,"Very concerned","Hispanic",0.34
+3,5,"Very concerned","Other",0.29
+3,5,"Somewhat concerned","White",0.45
+3,5,"Somewhat concerned","Black",0.38
+3,5,"Somewhat concerned","Hispanic",0.3
+3,5,"Somewhat concerned","Other",0.33
+3,5,"Not very concerned","White",0.23
+3,5,"Not very concerned","Black",0.15
+3,5,"Not very concerned","Hispanic",0.26
+3,5,"Not very concerned","Other",0.26
+3,5,"Not concerned at all","White",0.1
+3,5,"Not concerned at all","Black",0.08
+3,5,"Not concerned at all","Hispanic",0.11
+3,5,"Not concerned at all","Other",0.12
+3,6,"Very concerned","White",0.23
+3,6,"Very concerned","Black",0.5
+3,6,"Very concerned","Hispanic",0.23
+3,6,"Very concerned","Other",0.25
+3,6,"Somewhat concerned","White",0.42
+3,6,"Somewhat concerned","Black",0.29
+3,6,"Somewhat concerned","Hispanic",0.39
+3,6,"Somewhat concerned","Other",0.42
+3,6,"Not very concerned","White",0.26
+3,6,"Not very concerned","Black",0.16
+3,6,"Not very concerned","Hispanic",0.27
+3,6,"Not very concerned","Other",0.24
+3,6,"Not concerned at all","White",0.1
+3,6,"Not concerned at all","Black",0.05
+3,6,"Not concerned at all","Hispanic",0.11
+3,6,"Not concerned at all","Other",0.08
+3,7,"Very concerned","White",0.32
+3,7,"Very concerned","Black",0.43
+3,7,"Very concerned","Hispanic",0.44
+3,7,"Very concerned","Other",0.32
+3,7,"Somewhat concerned","White",0.45
+3,7,"Somewhat concerned","Black",0.38
+3,7,"Somewhat concerned","Hispanic",0.35
+3,7,"Somewhat concerned","Other",0.41
+3,7,"Not very concerned","White",0.18
+3,7,"Not very concerned","Black",0.16
+3,7,"Not very concerned","Hispanic",0.18
+3,7,"Not very concerned","Other",0.2
+3,7,"Not concerned at all","White",0.05
+3,7,"Not concerned at all","Black",0.03
+3,7,"Not concerned at all","Hispanic",0.03
+3,7,"Not concerned at all","Other",0.06
+4,1,"They are not taking the risks serious enough","White",0.2
+4,1,"They are not taking the risks serious enough","Black",0.24
+4,1,"They are not taking the risks serious enough","Hispanic",0.23
+4,1,"They are not taking the risks serious enough","Other",0.28
+4,1,"They are behaving appropriately","White",0.42
+4,1,"They are behaving appropriately","Black",0.36
+4,1,"They are behaving appropriately","Hispanic",0.42
+4,1,"They are behaving appropriately","Other",0.35
+4,1,"They are overreacting to the actual risks of contracting the virus","White",0.17
+4,1,"They are overreacting to the actual risks of contracting the virus","Black",0.09
+4,1,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.09
+4,1,"They are overreacting to the actual risks of contracting the virus","Other",0.1
+4,1,"Not sure","White",0.21
+4,1,"Not sure","Black",0.3
+4,1,"Not sure","Hispanic",0.27
+4,1,"Not sure","Other",0.26
+4,2,"They are not taking the risks seriously enough","White",0.24
+4,2,"They are not taking the risks seriously enough","Black",0.21
+4,2,"They are not taking the risks seriously enough","Hispanic",0.27
+4,2,"They are not taking the risks seriously enough","Other",0.34
+4,2,"They are behaving appropriately","White",0.42
+4,2,"They are behaving appropriately","Black",0.41
+4,2,"They are behaving appropriately","Hispanic",0.4
+4,2,"They are behaving appropriately","Other",0.3
+4,2,"They are overreacting to the actual risks of contracting the virus","White",0.18
+4,2,"They are overreacting to the actual risks of contracting the virus","Black",0.09
+4,2,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.17
+4,2,"They are overreacting to the actual risks of contracting the virus","Other",0.14
+4,2,"Not sure","White",0.16
+4,2,"Not sure","Black",0.29
+4,2,"Not sure","Hispanic",0.16
+4,2,"Not sure","Other",0.22
+4,3,"They are not taking the risks seriously enough","White",0.19
+4,3,"They are not taking the risks seriously enough","Black",0.25
+4,3,"They are not taking the risks seriously enough","Hispanic",0.2
+4,3,"They are not taking the risks seriously enough","Other",0.16
+4,3,"They are behaving appropriately","White",0.43
+4,3,"They are behaving appropriately","Black",0.38
+4,3,"They are behaving appropriately","Hispanic",0.42
+4,3,"They are behaving appropriately","Other",0.41
+4,3,"They are overreacting to the actual risks of contracting the virus","White",0.2
+4,3,"They are overreacting to the actual risks of contracting the virus","Black",0.15
+4,3,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.19
+4,3,"They are overreacting to the actual risks of contracting the virus","Other",0.12
+4,3,"Not sure","White",0.18
+4,3,"Not sure","Black",0.22
+4,3,"Not sure","Hispanic",0.19
+4,3,"Not sure","Other",0.31
+4,4,"They are not taking the risks seriously enough","White",0.26
+4,4,"They are not taking the risks seriously enough","Black",0.29
+4,4,"They are not taking the risks seriously enough","Hispanic",0.34
+4,4,"They are not taking the risks seriously enough","Other",0.27
+4,4,"They are behaving appropriately","White",0.4
+4,4,"They are behaving appropriately","Black",0.32
+4,4,"They are behaving appropriately","Hispanic",0.4
+4,4,"They are behaving appropriately","Other",0.35
+4,4,"They are overreacting to the actual risks of contracting the virus","White",0.18
+4,4,"They are overreacting to the actual risks of contracting the virus","Black",0.08
+4,4,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.15
+4,4,"They are overreacting to the actual risks of contracting the virus","Other",0.18
+4,4,"Not sure","White",0.15
+4,4,"Not sure","Black",0.31
+4,4,"Not sure","Hispanic",0.12
+4,4,"Not sure","Other",0.2
+4,5,"They are not taking the risks seriously enough","White",0.2
+4,5,"They are not taking the risks seriously enough","Black",0.21
+4,5,"They are not taking the risks seriously enough","Hispanic",0.3
+4,5,"They are not taking the risks seriously enough","Other",0.24
+4,5,"They are behaving appropriately","White",0.35
+4,5,"They are behaving appropriately","Black",0.28
+4,5,"They are behaving appropriately","Hispanic",0.35
+4,5,"They are behaving appropriately","Other",0.36
+4,5,"They are overreacting to the actual risks of contracting the virus","White",0.28
+4,5,"They are overreacting to the actual risks of contracting the virus","Black",0.32
+4,5,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.19
+4,5,"They are overreacting to the actual risks of contracting the virus","Other",0.27
+4,5,"Not sure","White",NA
+4,5,"Not sure","Black",0.19
+4,5,"Not sure","Hispanic",0.16
+4,5,"Not sure","Other",0.13
+4,6,"They are not taking the risks seriously enough","White",0.16
+4,6,"They are not taking the risks seriously enough","Black",0.22
+4,6,"They are not taking the risks seriously enough","Hispanic",0.19
+4,6,"They are not taking the risks seriously enough","Other",0.25
+4,6,"They are behaving appropriately","White",0.26
+4,6,"They are behaving appropriately","Black",0.36
+4,6,"They are behaving appropriately","Hispanic",0.22
+4,6,"They are behaving appropriately","Other",0.16
+4,6,"They are overreacting to the actual risks of contracting the virus","White",0.45
+4,6,"They are overreacting to the actual risks of contracting the virus","Black",0.28
+4,6,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.37
+4,6,"They are overreacting to the actual risks of contracting the virus","Other",0.38
+4,6,"Not sure","White",0.13
+4,6,"Not sure","Black",0.14
+4,6,"Not sure","Hispanic",0.22
+4,6,"Not sure","Other",0.21
+4,7,"They are not taking the risks seriously enough","White",0.22
+4,7,"They are not taking the risks seriously enough","Black",0.15
+4,7,"They are not taking the risks seriously enough","Hispanic",0.17
+4,7,"They are not taking the risks seriously enough","Other",0.18
+4,7,"They are behaving appropriately","White",0.22
+4,7,"They are behaving appropriately","Black",0.34
+4,7,"They are behaving appropriately","Hispanic",0.24
+4,7,"They are behaving appropriately","Other",0.31
+4,7,"They are overreacting to the actual risks of contracting the virus","White",0.46
+4,7,"They are overreacting to the actual risks of contracting the virus","Black",0.39
+4,7,"They are overreacting to the actual risks of contracting the virus","Hispanic",0.48
+4,7,"They are overreacting to the actual risks of contracting the virus","Other",0.39
+4,7,"Not sure","White",0.1
+4,7,"Not sure","Black",0.12
+4,7,"Not sure","Hispanic",0.11
+4,7,"Not sure","Other",0.12
+5,1,"Very worried","White",0.07
+5,1,"Very worried","Black",0.24
+5,1,"Very worried","Hispanic",0.24
+5,1,"Very worried","Other",0.26
+5,1,"Somewhat worried","White",0.24
+5,1,"Somewhat worried","Black",0.28
+5,1,"Somewhat worried","Hispanic",0.35
+5,1,"Somewhat worried","Other",0.28
+5,1,"Not too worried","White",0.48
+5,1,"Not too worried","Black",0.36
+5,1,"Not too worried","Hispanic",0.29
+5,1,"Not too worried","Other",0.3
+5,1,"Not worried at all","White",0.21
+5,1,"Not worried at all","Black",0.12
+5,1,"Not worried at all","Hispanic",0.12
+5,1,"Not worried at all","Other",0.16
+5,2,"Very worried","White",0.08
+5,2,"Very worried","Black",0.16
+5,2,"Very worried","Hispanic",0.18
+5,2,"Very worried","Other",0.17
+5,2,"Somewhat worried","White",0.26
+5,2,"Somewhat worried","Black",0.34
+5,2,"Somewhat worried","Hispanic",0.41
+5,2,"Somewhat worried","Other",0.26
+5,2,"Not too worried","White",0.43
+5,2,"Not too worried","Black",0.34
+5,2,"Not too worried","Hispanic",0.27
+5,2,"Not too worried","Other",0.23
+5,2,"Not worried at all","White",0.23
+5,2,"Not worried at all","Black",0.16
+5,2,"Not worried at all","Hispanic",0.14
+5,2,"Not worried at all","Other",0.34
+5,3,"Very worried","White",0.07
+5,3,"Very worried","Black",0.24
+5,3,"Very worried","Hispanic",0.15
+5,3,"Very worried","Other",0.1
+5,3,"Somewhat worried","White",0.25
+5,3,"Somewhat worried","Black",0.34
+5,3,"Somewhat worried","Hispanic",0.4
+5,3,"Somewhat worried","Other",0.29
+5,3,"Not too worried","White",0.46
+5,3,"Not too worried","Black",0.27
+5,3,"Not too worried","Hispanic",0.33
+5,3,"Not too worried","Other",0.44
+5,3,"Not worried at all","White",0.21
+5,3,"Not worried at all","Black",0.15
+5,3,"Not worried at all","Hispanic",0.12
+5,3,"Not worried at all","Other",0.17
+5,4,"Very worried","White",0.07
+5,4,"Very worried","Black",0.19
+5,4,"Very worried","Hispanic",0.16
+5,4,"Very worried","Other",0.12
+5,4,"Somewhat worried","White",0.28
+5,4,"Somewhat worried","Black",0.32
+5,4,"Somewhat worried","Hispanic",0.36
+5,4,"Somewhat worried","Other",0.38
+5,4,"Not too worried","White",0.43
+5,4,"Not too worried","Black",0.36
+5,4,"Not too worried","Hispanic",0.28
+5,4,"Not too worried","Other",0.32
+5,4,"Not worried at all","White",0.22
+5,4,"Not worried at all","Black",0.13
+5,4,"Not worried at all","Hispanic",0.19
+5,4,"Not worried at all","Other",0.18
+5,5,"Very worried","White",0.1
+5,5,"Very worried","Black",0.3
+5,5,"Very worried","Hispanic",0.21
+5,5,"Very worried","Other",0.16
+5,5,"Somewhat worried","White",0.33
+5,5,"Somewhat worried","Black",0.3
+5,5,"Somewhat worried","Hispanic",0.35
+5,5,"Somewhat worried","Other",0.35
+5,5,"Not too worried","White",0.4
+5,5,"Not too worried","Black",0.26
+5,5,"Not too worried","Hispanic",0.23
+5,5,"Not too worried","Other",0.27
+5,5,"Not worried at all","White",NA
+5,5,"Not worried at all","Black",0.14
+5,5,"Not worried at all","Hispanic",0.21
+5,5,"Not worried at all","Other",0.22
+5,6,"Very worried","White",0.11
+5,6,"Very worried","Black",0.27
+5,6,"Very worried","Hispanic",0.13
+5,6,"Very worried","Other",0.23
+5,6,"Somewhat worried","White",0.34
+5,6,"Somewhat worried","Black",0.37
+5,6,"Somewhat worried","Hispanic",0.41
+5,6,"Somewhat worried","Other",0.3
+5,6,"Not too worried","White",0.37
+5,6,"Not too worried","Black",0.25
+5,6,"Not too worried","Hispanic",0.3
+5,6,"Not too worried","Other",0.33
+5,6,"Not worried at all","White",0.18
+5,6,"Not worried at all","Black",0.1
+5,6,"Not worried at all","Hispanic",0.16
+5,6,"Not worried at all","Other",0.14
+5,7,"Very worried","White",0.13
+5,7,"Very worried","Black",0.16
+5,7,"Very worried","Hispanic",0.21
+5,7,"Very worried","Other",0.19
+5,7,"Somewhat worried","White",0.41
+5,7,"Somewhat worried","Black",0.47
+5,7,"Somewhat worried","Hispanic",0.42
+5,7,"Somewhat worried","Other",0.32
+5,7,"Not too worried","White",0.35
+5,7,"Not too worried","Black",0.31
+5,7,"Not too worried","Hispanic",0.28
+5,7,"Not too worried","Other",0.32
+5,7,"Not worried at all","White",0.11
+5,7,"Not worried at all","Black",0.06
+5,7,"Not worried at all","Hispanic",0.09
+5,7,"Not worried at all","Other",0.16

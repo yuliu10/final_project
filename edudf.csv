@@ -1,0 +1,265 @@
+"question","week","response","education","percent"
+1,5,"Very closely","HS or less",0.24
+1,5,"Very closely","Some college",0.36
+1,5,"Very closely","College Grad",0.5
+1,5,"Very closely","Postgrad",0.56
+1,5,"Somewhat closely","HS or less",0.42
+1,5,"Somewhat closely","Some college",0.44
+1,5,"Somewhat closely","College Grad",0.39
+1,5,"Somewhat closely","Postgrad",0.37
+1,5,"Not very closely","HS or less",0.2
+1,5,"Not very closely","Some college",0.15
+1,5,"Not very closely","College Grad",0.08
+1,5,"Not very closely","Postgrad",0.05
+1,5,"Not following at all","HS or less",0.14
+1,5,"Not following at all","Some college",0.05
+1,5,"Not following at all","College Grad",0.03
+1,5,"Not following at all","Postgrad",0.01
+1,5,"Totals","HS or less",1
+1,5,"Totals","Some college",1
+1,5,"Totals","College Grad",1
+1,5,"Totals","Postgrad",0.99
+1,6,"Very closely","HS or less",0.29
+1,6,"Very closely","Some college",0.38
+1,6,"Very closely","College Grad",0.39
+1,6,"Very closely","Postgrad",0.52
+1,6,"Somewhat closely","HS or less",0.44
+1,6,"Somewhat closely","Some college",0.44
+1,6,"Somewhat closely","College Grad",0.45
+1,6,"Somewhat closely","Postgrad",0.38
+1,6,"Not very closely","HS or less",0.17
+1,6,"Not very closely","Some college",0.15
+1,6,"Not very closely","College Grad",0.13
+1,6,"Not very closely","Postgrad",0.08
+1,6,"Not following at all","HS or less",0.1
+1,6,"Not following at all","Some college",0.04
+1,6,"Not following at all","College Grad",0.03
+1,6,"Not following at all","Postgrad",0.02
+1,6,"Totals","HS or less",1
+1,6,"Totals","Some college",1.01
+1,6,"Totals","College Grad",1
+1,6,"Totals","Postgrad",1
+1,7,"Very closely","HS or less",0.35
+1,7,"Very closely","Some college",0.41
+1,7,"Very closely","College Grad",0.58
+1,7,"Very closely","Postgrad",0.56
+1,7,"Somewhat closely","HS or less",0.47
+1,7,"Somewhat closely","Some college",0.47
+1,7,"Somewhat closely","College Grad",0.36
+1,7,"Somewhat closely","Postgrad",0.38
+1,7,"Not very closely","HS or less",0.15
+1,7,"Not very closely","Some college",0.09
+1,7,"Not very closely","College Grad",0.06
+1,7,"Not very closely","Postgrad",0.05
+1,7,"Not following at all","HS or less",0.03
+1,7,"Not following at all","Some college",0.02
+1,7,"Not following at all","College Grad",0
+1,7,"Not following at all","Postgrad",0
+1,7,"Totals","HS or less",1
+1,7,"Totals","Some college",0.99
+1,7,"Totals","College Grad",1
+1,7,"Totals","Postgrad",0.99
+2,5,"Strongly approve","HS or less",0.15
+2,5,"Strongly approve","Some college",0.27
+2,5,"Strongly approve","College Grad",0.33
+2,5,"Strongly approve","Postgrad",0.27
+2,5,"Somewhat approve","HS or less",0.17
+2,5,"Somewhat approve","Some college",0.14
+2,5,"Somewhat approve","College Grad",0.1
+2,5,"Somewhat approve","Postgrad",0.09
+2,5,"Somewhat disapprove","HS or less",0.12
+2,5,"Somewhat disapprove","Some college",0.12
+2,5,"Somewhat disapprove","College Grad",0.09
+2,5,"Somewhat disapprove","Postgrad",0.11
+2,5,"Strongly disapprove","HS or less",0.29
+2,5,"Strongly disapprove","Some college",0.35
+2,5,"Strongly disapprove","College Grad",0.41
+2,5,"Strongly disapprove","Postgrad",0.51
+2,5,"Not sure","HS or less",0.27
+2,5,"Not sure","Some college",0.12
+2,5,"Not sure","College Grad",0.07
+2,5,"Not sure","Postgrad",0.04
+2,6,"Strongly approve","HS or less",0.26
+2,6,"Strongly approve","Some college",0.28
+2,6,"Strongly approve","College Grad",0.24
+2,6,"Strongly approve","Postgrad",0.21
+2,6,"Somewhat approve","HS or less",0.18
+2,6,"Somewhat approve","Some college",0.17
+2,6,"Somewhat approve","College Grad",0.15
+2,6,"Somewhat approve","Postgrad",0.08
+2,6,"Somewhat disapprove","HS or less",0.08
+2,6,"Somewhat disapprove","Some college",0.09
+2,6,"Somewhat disapprove","College Grad",0.08
+2,6,"Somewhat disapprove","Postgrad",0.08
+2,6,"Strongly disapprove","HS or less",0.28
+2,6,"Strongly disapprove","Some college",0.34
+2,6,"Strongly disapprove","College Grad",0.39
+2,6,"Strongly disapprove","Postgrad",0.6
+2,6,"Not sure","HS or less",0.2
+2,6,"Not sure","Some college",0.12
+2,6,"Not sure","College Grad",0.14
+2,6,"Not sure","Postgrad",0.04
+2,7,"Strongly approve","HS or less",0.29
+2,7,"Strongly approve","Some college",0.25
+2,7,"Strongly approve","College Grad",0.23
+2,7,"Strongly approve","Postgrad",0.18
+2,7,"Somewhat approve","HS or less",0.22
+2,7,"Somewhat approve","Some college",0.2
+2,7,"Somewhat approve","College Grad",0.16
+2,7,"Somewhat approve","Postgrad",0.21
+2,7,"Somewhat disapprove","HS or less",0.15
+2,7,"Somewhat disapprove","Some college",0.15
+2,7,"Somewhat disapprove","College Grad",0.18
+2,7,"Somewhat disapprove","Postgrad",0.1
+2,7,"Strongly disapprove","HS or less",0.24
+2,7,"Strongly disapprove","Some college",0.3
+2,7,"Strongly disapprove","College Grad",0.41
+2,7,"Strongly disapprove","Postgrad",0.46
+2,7,"Not sure","HS or less",0.11
+2,7,"Not sure","Some college",0.1
+2,7,"Not sure","College Grad",0.03
+2,7,"Not sure","Postgrad",0.05
+3,5,"Very concerned","HS or less",0.27
+3,5,"Very concerned","Some college",0.22
+3,5,"Very concerned","College Grad",0.25
+3,5,"Very concerned","Postgrad",0.31
+3,5,"Somewhat concerned","HS or less",0.37
+3,5,"Somewhat concerned","Some college",0.41
+3,5,"Somewhat concerned","College Grad",0.49
+3,5,"Somewhat concerned","Postgrad",0.47
+3,5,"Not very concerned","HS or less",0.26
+3,5,"Not very concerned","Some college",0.24
+3,5,"Not very concerned","College Grad",0.2
+3,5,"Not very concerned","Postgrad",0.15
+3,5,"Not concerned at all","HS or less",0.1
+3,5,"Not concerned at all","Some college",0.12
+3,5,"Not concerned at all","College Grad",0.06
+3,5,"Not concerned at all","Postgrad",0.07
+3,6,"Very concerned","HS or less",0.25
+3,6,"Very concerned","Some college",0.3
+3,6,"Very concerned","College Grad",0.24
+3,6,"Very concerned","Postgrad",0.25
+3,6,"Somewhat concerned","HS or less",0.4
+3,6,"Somewhat concerned","Some college",0.36
+3,6,"Somewhat concerned","College Grad",0.41
+3,6,"Somewhat concerned","Postgrad",0.53
+3,6,"Not very concerned","HS or less",0.24
+3,6,"Not very concerned","Some college",0.26
+3,6,"Not very concerned","College Grad",0.27
+3,6,"Not very concerned","Postgrad",0.16
+3,6,"Not concerned at all","HS or less",0.11
+3,6,"Not concerned at all","Some college",0.09
+3,6,"Not concerned at all","College Grad",0.08
+3,6,"Not concerned at all","Postgrad",0.06
+3,7,"Very concerned","HS or less",0.34
+3,7,"Very concerned","Some college",0.32
+3,7,"Very concerned","College Grad",0.38
+3,7,"Very concerned","Postgrad",0.36
+3,7,"Somewhat concerned","HS or less",0.42
+3,7,"Somewhat concerned","Some college",0.43
+3,7,"Somewhat concerned","College Grad",0.4
+3,7,"Somewhat concerned","Postgrad",0.5
+3,7,"Not very concerned","HS or less",0.2
+3,7,"Not very concerned","Some college",0.19
+3,7,"Not very concerned","College Grad",0.17
+3,7,"Not very concerned","Postgrad",0.12
+3,7,"Not concerned at all","HS or less",0.04
+3,7,"Not concerned at all","Some college",0.06
+3,7,"Not concerned at all","College Grad",0.04
+3,7,"Not concerned at all","Postgrad",0.03
+4,5,"They are not taking the risks seriously enough","HS or less",0.27
+4,5,"They are not taking the risks seriously enough","Some college",0.19
+4,5,"They are not taking the risks seriously enough","College Grad",0.19
+4,5,"They are not taking the risks seriously enough","Postgrad",0.26
+4,5,"They are behaving appropriately","HS or less",0.28
+4,5,"They are behaving appropriately","Some college",0.31
+4,5,"They are behaving appropriately","College Grad",0.31
+4,5,"They are behaving appropriately","Postgrad",0.25
+4,5,"They are overreacting to the actual risks of contracting the virus","HS or less",0.21
+4,5,"They are overreacting to the actual risks of contracting the virus","Some college",0.35
+4,5,"They are overreacting to the actual risks of contracting the virus","College Grad",0.36
+4,5,"They are overreacting to the actual risks of contracting the virus","Postgrad",0.34
+4,5,"Not sure","HS or less",0.24
+4,5,"Not sure","Some college",0.16
+4,5,"Not sure","College Grad",0.14
+4,5,"Not sure","Postgrad",0.15
+4,6,"They are not taking the risks seriously enough","HS or less",0.19
+4,6,"They are not taking the risks seriously enough","Some college",0.2
+4,6,"They are not taking the risks seriously enough","College Grad",0.13
+4,6,"They are not taking the risks seriously enough","Postgrad",0.19
+4,6,"They are behaving appropriately","HS or less",0.26
+4,6,"They are behaving appropriately","Some college",0.28
+4,6,"They are behaving appropriately","College Grad",0.26
+4,6,"They are behaving appropriately","Postgrad",0.22
+4,6,"They are overreacting to the actual risks of contracting the virus","HS or less",0.37
+4,6,"They are overreacting to the actual risks of contracting the virus","Some college",0.39
+4,6,"They are overreacting to the actual risks of contracting the virus","College Grad",0.49
+4,6,"They are overreacting to the actual risks of contracting the virus","Postgrad",0.49
+4,6,"Not sure","HS or less",0.17
+4,6,"Not sure","Some college",0.14
+4,6,"Not sure","College Grad",0.12
+4,6,"Not sure","Postgrad",0.1
+4,7,"They are not taking the risks seriously enough","HS or less",0.14
+4,7,"They are not taking the risks seriously enough","Some college",0.2
+4,7,"They are not taking the risks seriously enough","College Grad",0.27
+4,7,"They are not taking the risks seriously enough","Postgrad",0.3
+4,7,"They are behaving appropriately","HS or less",0.25
+4,7,"They are behaving appropriately","Some college",0.23
+4,7,"They are behaving appropriately","College Grad",0.21
+4,7,"They are behaving appropriately","Postgrad",0.31
+4,7,"They are overreacting to the actual risks of contracting the virus","HS or less",0.47
+4,7,"They are overreacting to the actual risks of contracting the virus","Some college",0.48
+4,7,"They are overreacting to the actual risks of contracting the virus","College Grad",0.42
+4,7,"They are overreacting to the actual risks of contracting the virus","Postgrad",0.34
+4,7,"Not sure","HS or less",0.14
+4,7,"Not sure","Some college",0.09
+4,7,"Not sure","College Grad",0.1
+4,7,"Not sure","Postgrad",0.06
+5,5,"Very worried","HS or less",0.19
+5,5,"Very worried","Some college",0.11
+5,5,"Very worried","College Grad",0.11
+5,5,"Very worried","Postgrad",0.09
+5,5,"Somewhat worried","HS or less",0.31
+5,5,"Somewhat worried","Some college",0.34
+5,5,"Somewhat worried","College Grad",0.32
+5,5,"Somewhat worried","Postgrad",0.38
+5,5,"Not too worried","HS or less",0.3
+5,5,"Not too worried","Some college",0.36
+5,5,"Not too worried","College Grad",0.41
+5,5,"Not too worried","Postgrad",0.4
+5,5,"Not worried at all","HS or less",0.2
+5,5,"Not worried at all","Some college",0.19
+5,5,"Not worried at all","College Grad",0.16
+5,5,"Not worried at all","Postgrad",0.12
+5,6,"Very worried","HS or less",0.17
+5,6,"Very worried","Some college",0.14
+5,6,"Very worried","College Grad",0.09
+5,6,"Very worried","Postgrad",0.1
+5,6,"Somewhat worried","HS or less",0.35
+5,6,"Somewhat worried","Some college",0.37
+5,6,"Somewhat worried","College Grad",0.34
+5,6,"Somewhat worried","Postgrad",0.35
+5,6,"Not too worried","HS or less",0.31
+5,6,"Not too worried","Some college",0.33
+5,6,"Not too worried","College Grad",0.4
+5,6,"Not too worried","Postgrad",0.43
+5,6,"Not worried at all","HS or less",0.17
+5,6,"Not worried at all","Some college",0.16
+5,6,"Not worried at all","College Grad",0.17
+5,6,"Not worried at all","Postgrad",0.12
+5,7,"Very worried","HS or less",0.15
+5,7,"Very worried","Some college",0.16
+5,7,"Very worried","College Grad",0.15
+5,7,"Very worried","Postgrad",0.1
+5,7,"Somewhat worried","HS or less",0.43
+5,7,"Somewhat worried","Some college",0.38
+5,7,"Somewhat worried","College Grad",0.39
+5,7,"Somewhat worried","Postgrad",0.48
+5,7,"Not too worried","HS or less",0.32
+5,7,"Not too worried","Some college",0.34
+5,7,"Not too worried","College Grad",0.36
+5,7,"Not too worried","Postgrad",0.32
+5,7,"Not worried at all","HS or less",0.1
+5,7,"Not worried at all","Some college",0.12
+5,7,"Not worried at all","College Grad",0.1
+5,7,"Not worried at all","Postgrad",0.1

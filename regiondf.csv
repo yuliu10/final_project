@@ -1,0 +1,573 @@
+"question","week","response","region","percent"
+1,1,"Very closely","Northeast",0.24
+1,1,"Very closely","Midwest",0.21
+1,1,"Very closely","South",0.21
+1,1,"Very closely","West",0.25
+1,1,"Somewhat closely","Northeast",0.44
+1,1,"Somewhat closely","Midwest",0.44
+1,1,"Somewhat closely","South",0.45
+1,1,"Somewhat closely","West",0.52
+1,1,"Not very closely","Northeast",0.22
+1,1,"Not very closely","Midwest",0.24
+1,1,"Not very closely","South",0.24
+1,1,"Not very closely","West",0.19
+1,1,"Not following at all","Northeast",0.1
+1,1,"Not following at all","Midwest",0.1
+1,1,"Not following at all","South",0.11
+1,1,"Not following at all","West",0.05
+1,2,"Very closely","Northeast",0.25
+1,2,"Very closely","Midwest",0.21
+1,2,"Very closely","South",0.25
+1,2,"Very closely","West",0.27
+1,2,"Somewhat closely","Northeast",0.47
+1,2,"Somewhat closely","Midwest",0.46
+1,2,"Somewhat closely","South",0.43
+1,2,"Somewhat closely","West",0.45
+1,2,"Not very closely","Northeast",0.2
+1,2,"Not very closely","Midwest",0.24
+1,2,"Not very closely","South",0.21
+1,2,"Not very closely","West",0.17
+1,2,"Not following at all","Northeast",0.07
+1,2,"Not following at all","Midwest",0.08
+1,2,"Not following at all","South",0.12
+1,2,"Not following at all","West",0.1
+1,3,"Very closely","Northeast",0.23
+1,3,"Very closely","Midwest",0.19
+1,3,"Very closely","South",0.23
+1,3,"Very closely","West",0.24
+1,3,"Somewhat closely","Northeast",0.45
+1,3,"Somewhat closely","Midwest",0.45
+1,3,"Somewhat closely","South",0.48
+1,3,"Somewhat closely","West",0.48
+1,3,"Not very closely","Northeast",0.25
+1,3,"Not very closely","Midwest",0.28
+1,3,"Not very closely","South",0.23
+1,3,"Not very closely","West",0.22
+1,3,"Not following at all","Northeast",0.07
+1,3,"Not following at all","Midwest",0.08
+1,3,"Not following at all","South",0.07
+1,3,"Not following at all","West",0.06
+1,4,"Very closely","Northeast",0.25
+1,4,"Very closely","Midwest",0.22
+1,4,"Very closely","South",0.22
+1,4,"Very closely","West",0.28
+1,4,"Somewhat closely","Northeast",0.44
+1,4,"Somewhat closely","Midwest",0.52
+1,4,"Somewhat closely","South",0.43
+1,4,"Somewhat closely","West",0.49
+1,4,"Not very closely","Northeast",0.21
+1,4,"Not very closely","Midwest",0.17
+1,4,"Not very closely","South",0.26
+1,4,"Not very closely","West",0.18
+1,4,"Not following at all","Northeast",0.1
+1,4,"Not following at all","Midwest",0.1
+1,4,"Not following at all","South",0.09
+1,4,"Not following at all","West",0.05
+1,5,"Very closely","Northeast",0.37
+1,5,"Very closely","Midwest",0.29
+1,5,"Very closely","South",0.36
+1,5,"Very closely","West",0.41
+1,5,"Somewhat closely","Northeast",0.4
+1,5,"Somewhat closely","Midwest",0.43
+1,5,"Somewhat closely","South",0.43
+1,5,"Somewhat closely","West",0.4
+1,5,"Not very closely","Northeast",0.15
+1,5,"Not very closely","Midwest",0.16
+1,5,"Not very closely","South",0.15
+1,5,"Not very closely","West",0.12
+1,5,"Not following at all","Northeast",0.09
+1,5,"Not following at all","Midwest",0.12
+1,5,"Not following at all","South",0.06
+1,5,"Not following at all","West",0.07
+1,6,"Very closely","Northeast",0.38
+1,6,"Very closely","Midwest",0.31
+1,6,"Very closely","South",0.39
+1,6,"Very closely","West",0.34
+1,6,"Somewhat closely","Northeast",0.44
+1,6,"Somewhat closely","Midwest",0.45
+1,6,"Somewhat closely","South",0.41
+1,6,"Somewhat closely","West",0.46
+1,6,"Not very closely","Northeast",0.15
+1,6,"Not very closely","Midwest",0.16
+1,6,"Not very closely","South",0.14
+1,6,"Not very closely","West",0.14
+1,6,"Not following at all","Northeast",0.03
+1,6,"Not following at all","Midwest",0.08
+1,6,"Not following at all","South",0.06
+1,6,"Not following at all","West",0.06
+1,7,"Very closely","Northeast",0.42
+1,7,"Very closely","Midwest",0.44
+1,7,"Very closely","South",0.43
+1,7,"Very closely","West",0.45
+1,7,"Somewhat closely","Northeast",0.45
+1,7,"Somewhat closely","Midwest",0.45
+1,7,"Somewhat closely","South",0.43
+1,7,"Somewhat closely","West",0.45
+1,7,"Not very closely","Northeast",0.12
+1,7,"Not very closely","Midwest",0.09
+1,7,"Not very closely","South",0.12
+1,7,"Not very closely","West",0.08
+1,7,"Not following at all","Northeast",0.01
+1,7,"Not following at all","Midwest",0.02
+1,7,"Not following at all","South",0.02
+1,7,"Not following at all","West",0.02
+2,1,"Strongly approve","Northeast",0.21
+2,1,"Strongly approve","Midwest",0.27
+2,1,"Strongly approve","South",0.24
+2,1,"Strongly approve","West",0.25
+2,1,"Somewhat approve","Northeast",0.18
+2,1,"Somewhat approve","Midwest",0.17
+2,1,"Somewhat approve","South",0.18
+2,1,"Somewhat approve","West",0.17
+2,1,"Somewhat disapprove","Northeast",0.14
+2,1,"Somewhat disapprove","Midwest",0.11
+2,1,"Somewhat disapprove","South",0.09
+2,1,"Somewhat disapprove","West",0.11
+2,1,"Strongly disapprove","Northeast",0.21
+2,1,"Strongly disapprove","Midwest",0.14
+2,1,"Strongly disapprove","South",0.17
+2,1,"Strongly disapprove","West",0.24
+2,1,"Not sure","Northeast",0.26
+2,1,"Not sure","Midwest",0.32
+2,1,"Not sure","South",0.33
+2,1,"Not sure","West",0.23
+2,2,"Strongly approve","Northeast",0.21
+2,2,"Strongly approve","Midwest",0.24
+2,2,"Strongly approve","South",0.21
+2,2,"Strongly approve","West",0.23
+2,2,"Somewhat approve","Northeast",0.2
+2,2,"Somewhat approve","Midwest",0.15
+2,2,"Somewhat approve","South",0.17
+2,2,"Somewhat approve","West",0.17
+2,2,"Somewhat disapprove","Northeast",0.12
+2,2,"Somewhat disapprove","Midwest",0.1
+2,2,"Somewhat disapprove","South",0.11
+2,2,"Somewhat disapprove","West",0.14
+2,2,"Strongly disapprove","Northeast",0.16
+2,2,"Strongly disapprove","Midwest",0.17
+2,2,"Strongly disapprove","South",0.17
+2,2,"Strongly disapprove","West",0.16
+2,2,"Not sure","Northeast",0.31
+2,2,"Not sure","Midwest",0.34
+2,2,"Not sure","South",0.33
+2,2,"Not sure","West",0.31
+2,3,"Strongly approve","Northeast",0.22
+2,3,"Strongly approve","Midwest",0.2
+2,3,"Strongly approve","South",0.23
+2,3,"Strongly approve","West",0.21
+2,3,"Somewhat approve","Northeast",0.13
+2,3,"Somewhat approve","Midwest",0.18
+2,3,"Somewhat approve","South",0.19
+2,3,"Somewhat approve","West",0.16
+2,3,"Somewhat disapprove","Northeast",0.1
+2,3,"Somewhat disapprove","Midwest",0.11
+2,3,"Somewhat disapprove","South",0.07
+2,3,"Somewhat disapprove","West",0.13
+2,3,"Strongly disapprove","Northeast",0.23
+2,3,"Strongly disapprove","Midwest",0.23
+2,3,"Strongly disapprove","South",0.22
+2,3,"Strongly disapprove","West",0.22
+2,3,"Not sure","Northeast",0.33
+2,3,"Not sure","Midwest",0.28
+2,3,"Not sure","South",0.29
+2,3,"Not sure","West",0.29
+2,4,"Strongly approve","Northeast",0.22
+2,4,"Strongly approve","Midwest",0.19
+2,4,"Strongly approve","South",0.24
+2,4,"Strongly approve","West",0.21
+2,4,"Somewhat approve","Northeast",0.19
+2,4,"Somewhat approve","Midwest",0.16
+2,4,"Somewhat approve","South",0.18
+2,4,"Somewhat approve","West",0.12
+2,4,"Somewhat disapprove","Northeast",0.11
+2,4,"Somewhat disapprove","Midwest",0.13
+2,4,"Somewhat disapprove","South",0.08
+2,4,"Somewhat disapprove","West",0.13
+2,4,"Strongly disapprove","Northeast",0.18
+2,4,"Strongly disapprove","Midwest",0.22
+2,4,"Strongly disapprove","South",0.17
+2,4,"Strongly disapprove","West",0.28
+2,4,"Not sure","Northeast",0.3
+2,4,"Not sure","Midwest",0.29
+2,4,"Not sure","South",0.33
+2,4,"Not sure","West",0.27
+2,5,"Strongly approve","Northeast",0.17
+2,5,"Strongly approve","Midwest",0.2
+2,5,"Strongly approve","South",0.28
+2,5,"Strongly approve","West",0.23
+2,5,"Somewhat approve","Northeast",0.16
+2,5,"Somewhat approve","Midwest",0.18
+2,5,"Somewhat approve","South",0.13
+2,5,"Somewhat approve","West",0.11
+2,5,"Somewhat disapprove","Northeast",0.14
+2,5,"Somewhat disapprove","Midwest",0.09
+2,5,"Somewhat disapprove","South",0.12
+2,5,"Somewhat disapprove","West",0.09
+2,5,"Strongly disapprove","Northeast",0.36
+2,5,"Strongly disapprove","Midwest",0.36
+2,5,"Strongly disapprove","South",0.33
+2,5,"Strongly disapprove","West",0.39
+2,5,"Not sure","Northeast",0.17
+2,5,"Not sure","Midwest",0.17
+2,5,"Not sure","South",0.15
+2,5,"Not sure","West",0.16
+2,6,"Strongly approve","Northeast",0.22
+2,6,"Strongly approve","Midwest",0.25
+2,6,"Strongly approve","South",0.27
+2,6,"Strongly approve","West",0.26
+2,6,"Somewhat approve","Northeast",0.18
+2,6,"Somewhat approve","Midwest",0.14
+2,6,"Somewhat approve","South",0.17
+2,6,"Somewhat approve","West",0.17
+2,6,"Somewhat disapprove","Northeast",0.07
+2,6,"Somewhat disapprove","Midwest",0.08
+2,6,"Somewhat disapprove","South",0.09
+2,6,"Somewhat disapprove","West",0.08
+2,6,"Strongly disapprove","Northeast",0.4
+2,6,"Strongly disapprove","Midwest",0.33
+2,6,"Strongly disapprove","South",0.33
+2,6,"Strongly disapprove","West",0.37
+2,6,"Not sure","Northeast",0.13
+2,6,"Not sure","Midwest",0.21
+2,6,"Not sure","South",0.14
+2,6,"Not sure","West",0.11
+2,7,"Strongly approve","Northeast",0.21
+2,7,"Strongly approve","Midwest",0.26
+2,7,"Strongly approve","South",0.28
+2,7,"Strongly approve","West",0.22
+2,7,"Somewhat approve","Northeast",0.21
+2,7,"Somewhat approve","Midwest",0.22
+2,7,"Somewhat approve","South",0.17
+2,7,"Somewhat approve","West",0.23
+2,7,"Somewhat disapprove","Northeast",0.14
+2,7,"Somewhat disapprove","Midwest",0.13
+2,7,"Somewhat disapprove","South",0.18
+2,7,"Somewhat disapprove","West",0.12
+2,7,"Strongly disapprove","Northeast",0.34
+2,7,"Strongly disapprove","Midwest",0.3
+2,7,"Strongly disapprove","South",0.3
+2,7,"Strongly disapprove","West",0.34
+2,7,"Not sure","Northeast",0.1
+2,7,"Not sure","Midwest",0.08
+2,7,"Not sure","South",0.08
+2,7,"Not sure","West",0.08
+3,1,"Very concerned","Northeast",0.22
+3,1,"Very concerned","Midwest",0.17
+3,1,"Very concerned","South",0.17
+3,1,"Very concerned","West",0.2
+3,1,"Somewhat concerned","Northeast",0.45
+3,1,"Somewhat concerned","Midwest",0.44
+3,1,"Somewhat concerned","South",0.45
+3,1,"Somewhat concerned","West",0.41
+3,1,"Not very concerned","Northeast",0.27
+3,1,"Not very concerned","Midwest",0.3
+3,1,"Not very concerned","South",0.28
+3,1,"Not very concerned","West",0.3
+3,1,"Not concerned at all","Northeast",0.06
+3,1,"Not concerned at all","Midwest",0.09
+3,1,"Not concerned at all","South",0.11
+3,1,"Not concerned at all","West",0.09
+3,2,"Very concerned","Northeast",0.23
+3,2,"Very concerned","Midwest",0.18
+3,2,"Very concerned","South",0.23
+3,2,"Very concerned","West",0.17
+3,2,"Somewhat concerned","Northeast",0.4
+3,2,"Somewhat concerned","Midwest",0.41
+3,2,"Somewhat concerned","South",0.4
+3,2,"Somewhat concerned","West",0.43
+3,2,"Not very concerned","Northeast",0.25
+3,2,"Not very concerned","Midwest",0.31
+3,2,"Not very concerned","South",0.27
+3,2,"Not very concerned","West",0.27
+3,2,"Not concerned at all","Northeast",0.12
+3,2,"Not concerned at all","Midwest",0.09
+3,2,"Not concerned at all","South",0.11
+3,2,"Not concerned at all","West",0.13
+3,3,"Very concerned","Northeast",0.22
+3,3,"Very concerned","Midwest",0.15
+3,3,"Very concerned","South",0.2
+3,3,"Very concerned","West",0.12
+3,3,"Somewhat concerned","Northeast",0.36
+3,3,"Somewhat concerned","Midwest",0.41
+3,3,"Somewhat concerned","South",0.46
+3,3,"Somewhat concerned","West",0.44
+3,3,"Not very concerned","Northeast",0.32
+3,3,"Not very concerned","Midwest",0.36
+3,3,"Not very concerned","South",0.27
+3,3,"Not very concerned","West",0.33
+3,3,"Not concerned at all","Northeast",0.1
+3,3,"Not concerned at all","Midwest",0.08
+3,3,"Not concerned at all","South",0.07
+3,3,"Not concerned at all","West",0.11
+3,4,"Very concerned","Northeast",0.21
+3,4,"Very concerned","Midwest",0.19
+3,4,"Very concerned","South",0.22
+3,4,"Very concerned","West",0.21
+3,4,"Somewhat concerned","Northeast",0.43
+3,4,"Somewhat concerned","Midwest",0.44
+3,4,"Somewhat concerned","South",0.41
+3,4,"Somewhat concerned","West",0.43
+3,4,"Not very concerned","Northeast",0.28
+3,4,"Not very concerned","Midwest",0.26
+3,4,"Not very concerned","South",0.26
+3,4,"Not very concerned","West",0.27
+3,4,"Not concerned at all","Northeast",0.09
+3,4,"Not concerned at all","Midwest",0.1
+3,4,"Not concerned at all","South",0.11
+3,4,"Not concerned at all","West",0.09
+3,5,"Very concerned","Northeast",0.32
+3,5,"Very concerned","Midwest",0.2
+3,5,"Very concerned","South",0.24
+3,5,"Very concerned","West",0.27
+3,5,"Somewhat concerned","Northeast",0.41
+3,5,"Somewhat concerned","Midwest",0.46
+3,5,"Somewhat concerned","South",0.4
+3,5,"Somewhat concerned","West",0.42
+3,5,"Not very concerned","Northeast",0.19
+3,5,"Not very concerned","Midwest",0.25
+3,5,"Not very concerned","South",0.24
+3,5,"Not very concerned","West",0.22
+3,5,"Not concerned at all","Northeast",0.08
+3,5,"Not concerned at all","Midwest",0.09
+3,5,"Not concerned at all","South",0.11
+3,5,"Not concerned at all","West",0.09
+3,6,"Very concerned","Northeast",0.25
+3,6,"Very concerned","Midwest",0.25
+3,6,"Very concerned","South",0.29
+3,6,"Very concerned","West",0.24
+3,6,"Somewhat concerned","Northeast",0.47
+3,6,"Somewhat concerned","Midwest",0.38
+3,6,"Somewhat concerned","South",0.38
+3,6,"Somewhat concerned","West",0.39
+3,6,"Not very concerned","Northeast",0.19
+3,6,"Not very concerned","Midwest",0.31
+3,6,"Not very concerned","South",0.22
+3,6,"Not very concerned","West",0.27
+3,6,"Not concerned at all","Northeast",0.1
+3,6,"Not concerned at all","Midwest",0.07
+3,6,"Not concerned at all","South",0.1
+3,6,"Not concerned at all","West",0.1
+3,7,"Very concerned","Northeast",0.33
+3,7,"Very concerned","Midwest",0.34
+3,7,"Very concerned","South",0.33
+3,7,"Very concerned","West",0.4
+3,7,"Somewhat concerned","Northeast",0.5
+3,7,"Somewhat concerned","Midwest",0.39
+3,7,"Somewhat concerned","South",0.44
+3,7,"Somewhat concerned","West",0.41
+3,7,"Not very concerned","Northeast",0.12
+3,7,"Not very concerned","Midwest",0.23
+3,7,"Not very concerned","South",0.19
+3,7,"Not very concerned","West",0.16
+3,7,"Not concerned at all","Northeast",0.04
+3,7,"Not concerned at all","Midwest",0.04
+3,7,"Not concerned at all","South",0.05
+3,7,"Not concerned at all","West",0.04
+4,1,"They are not taking the risks serious enough","Northeast",0.28
+4,1,"They are not taking the risks serious enough","Midwest",0.17
+4,1,"They are not taking the risks serious enough","South",0.21
+4,1,"They are not taking the risks serious enough","West",0.21
+4,1,"They are behaving appropriately","Northeast",0.42
+4,1,"They are behaving appropriately","Midwest",0.45
+4,1,"They are behaving appropriately","South",0.39
+4,1,"They are behaving appropriately","West",0.39
+4,1,"They are overreacting to the actual risks of contracting the virus","Northeast",0.14
+4,1,"They are overreacting to the actual risks of contracting the virus","Midwest",0.14
+4,1,"They are overreacting to the actual risks of contracting the virus","South",0.13
+4,1,"They are overreacting to the actual risks of contracting the virus","West",0.2
+4,1,"Not sure","Northeast",0.16
+4,1,"Not sure","Midwest",0.24
+4,1,"Not sure","South",0.27
+4,1,"Not sure","West",0.2
+4,2,"They are not taking the risks seriously enough","Northeast",0.27
+4,2,"They are not taking the risks seriously enough","Midwest",0.19
+4,2,"They are not taking the risks seriously enough","South",0.27
+4,2,"They are not taking the risks seriously enough","West",0.24
+4,2,"They are behaving appropriately","Northeast",0.42
+4,2,"They are behaving appropriately","Midwest",0.46
+4,2,"They are behaving appropriately","South",0.38
+4,2,"They are behaving appropriately","West",0.38
+4,2,"They are overreacting to the actual risks of contracting the virus","Northeast",0.15
+4,2,"They are overreacting to the actual risks of contracting the virus","Midwest",0.17
+4,2,"They are overreacting to the actual risks of contracting the virus","South",0.16
+4,2,"They are overreacting to the actual risks of contracting the virus","West",0.2
+4,2,"Not sure","Northeast",0.16
+4,2,"Not sure","Midwest",0.19
+4,2,"Not sure","South",0.19
+4,2,"Not sure","West",0.18
+4,4,"They are not taking the risks seriously enough","Northeast",0.15
+4,4,"They are not taking the risks seriously enough","Midwest",0.2
+4,4,"They are not taking the risks seriously enough","South",0.23
+4,4,"They are not taking the risks seriously enough","West",0.18
+4,4,"They are behaving appropriately","Northeast",0.44
+4,4,"They are behaving appropriately","Midwest",0.44
+4,4,"They are behaving appropriately","South",0.43
+4,4,"They are behaving appropriately","West",0.38
+4,4,"They are overreacting to the actual risks of contracting the virus","Northeast",0.24
+4,4,"They are overreacting to the actual risks of contracting the virus","Midwest",0.17
+4,4,"They are overreacting to the actual risks of contracting the virus","South",0.15
+4,4,"They are overreacting to the actual risks of contracting the virus","West",0.22
+4,4,"Not sure","Northeast",0.17
+4,4,"Not sure","Midwest",0.2
+4,4,"Not sure","South",0.19
+4,4,"Not sure","West",0.23
+4,5,"They are not taking the risks seriously enough","Northeast",0.2
+4,5,"They are not taking the risks seriously enough","Midwest",0.26
+4,5,"They are not taking the risks seriously enough","South",0.22
+4,5,"They are not taking the risks seriously enough","West",0.23
+4,5,"They are behaving appropriately","Northeast",0.33
+4,5,"They are behaving appropriately","Midwest",0.29
+4,5,"They are behaving appropriately","South",0.29
+4,5,"They are behaving appropriately","West",0.28
+4,5,"They are overreacting to the actual risks of contracting the virus","Northeast",0.26
+4,5,"They are overreacting to the actual risks of contracting the virus","Midwest",0.29
+4,5,"They are overreacting to the actual risks of contracting the virus","South",0.3
+4,5,"They are overreacting to the actual risks of contracting the virus","West",0.33
+4,5,"Not sure","Northeast",0.21
+4,5,"Not sure","Midwest",0.17
+4,5,"Not sure","South",0.19
+4,5,"Not sure","West",0.16
+4,6,"They are not taking the risks seriously enough","Northeast",0.19
+4,6,"They are not taking the risks seriously enough","Midwest",0.2
+4,6,"They are not taking the risks seriously enough","South",0.18
+4,6,"They are not taking the risks seriously enough","West",0.15
+4,6,"They are behaving appropriately","Northeast",0.29
+4,6,"They are behaving appropriately","Midwest",0.24
+4,6,"They are behaving appropriately","South",0.27
+4,6,"They are behaving appropriately","West",0.25
+4,6,"They are overreacting to the actual risks of contracting the virus","Northeast",0.41
+4,6,"They are overreacting to the actual risks of contracting the virus","Midwest",0.39
+4,6,"They are overreacting to the actual risks of contracting the virus","South",0.4
+4,6,"They are overreacting to the actual risks of contracting the virus","West",0.47
+4,6,"Not sure","Northeast",0.11
+4,6,"Not sure","Midwest",0.18
+4,6,"Not sure","South",0.15
+4,6,"Not sure","West",0.14
+4,7,"They are not taking the risks seriously enough","Northeast",0.23
+4,7,"They are not taking the risks seriously enough","Midwest",0.22
+4,7,"They are not taking the risks seriously enough","South",0.19
+4,7,"They are not taking the risks seriously enough","West",0.2
+4,7,"They are behaving appropriately","Northeast",0.25
+4,7,"They are behaving appropriately","Midwest",0.2
+4,7,"They are behaving appropriately","South",0.26
+4,7,"They are behaving appropriately","West",0.24
+4,7,"They are overreacting to the actual risks of contracting the virus","Northeast",0.38
+4,7,"They are overreacting to the actual risks of contracting the virus","Midwest",0.48
+4,7,"They are overreacting to the actual risks of contracting the virus","South",0.46
+4,7,"They are overreacting to the actual risks of contracting the virus","West",0.45
+4,7,"Not sure","Northeast",0.14
+4,7,"Not sure","Midwest",0.1
+4,7,"Not sure","South",0.09
+4,7,"Not sure","West",0.11
+5,1,"Very worried","Northeast",0.17
+5,1,"Very worried","Midwest",0.09
+5,1,"Very worried","South",0.15
+5,1,"Very worried","West",0.09
+5,1,"Somewhat worried","Northeast",0.27
+5,1,"Somewhat worried","Midwest",0.26
+5,1,"Somewhat worried","South",0.24
+5,1,"Somewhat worried","West",0.29
+5,1,"Not too worried","Northeast",0.41
+5,1,"Not too worried","Midwest",0.44
+5,1,"Not too worried","South",0.43
+5,1,"Not too worried","West",0.41
+5,1,"Not worried at all","Northeast",0.15
+5,1,"Not worried at all","Midwest",0.2
+5,1,"Not worried at all","South",0.18
+5,1,"Not worried at all","West",0.2
+5,2,"Very worried","Northeast",0.12
+5,2,"Very worried","Midwest",0.06
+5,2,"Very worried","South",0.13
+5,2,"Very worried","West",0.09
+5,2,"Somewhat worried","Northeast",0.28
+5,2,"Somewhat worried","Midwest",0.24
+5,2,"Somewhat worried","South",0.31
+5,2,"Somewhat worried","West",0.3
+5,2,"Not too worried","Northeast",0.39
+5,2,"Not too worried","Midwest",0.47
+5,2,"Not too worried","South",0.35
+5,2,"Not too worried","West",0.38
+5,2,"Not worried at all","Northeast",0.21
+5,2,"Not worried at all","Midwest",0.23
+5,2,"Not worried at all","South",0.21
+5,2,"Not worried at all","West",0.22
+5,3,"Very worried","Northeast",0.09
+5,3,"Very worried","Midwest",0.06
+5,3,"Very worried","South",0.14
+5,3,"Very worried","West",0.09
+5,3,"Somewhat worried","Northeast",0.28
+5,3,"Somewhat worried","Midwest",0.25
+5,3,"Somewhat worried","South",0.3
+5,3,"Somewhat worried","West",0.28
+5,3,"Not too worried","Northeast",0.41
+5,3,"Not too worried","Midwest",0.48
+5,3,"Not too worried","South",0.39
+5,3,"Not too worried","West",0.44
+5,3,"Not worried at all","Northeast",0.23
+5,3,"Not worried at all","Midwest",0.21
+5,3,"Not worried at all","South",0.17
+5,3,"Not worried at all","West",0.19
+5,4,"Very worried","Northeast",0.09
+5,4,"Very worried","Midwest",0.08
+5,4,"Very worried","South",0.11
+5,4,"Very worried","West",0.11
+5,4,"Somewhat worried","Northeast",0.3
+5,4,"Somewhat worried","Midwest",0.31
+5,4,"Somewhat worried","South",0.31
+5,4,"Somewhat worried","West",0.27
+5,4,"Not too worried","Northeast",0.45
+5,4,"Not too worried","Midwest",0.4
+5,4,"Not too worried","South",0.38
+5,4,"Not too worried","West",0.38
+5,4,"Not worried at all","Northeast",0.17
+5,4,"Not worried at all","Midwest",0.21
+5,4,"Not worried at all","South",0.2
+5,4,"Not worried at all","West",0.23
+5,5,"Very worried","Northeast",0.15
+5,5,"Very worried","Midwest",0.1
+5,5,"Very worried","South",0.13
+5,5,"Very worried","West",0.17
+5,5,"Somewhat worried","Northeast",0.34
+5,5,"Somewhat worried","Midwest",0.31
+5,5,"Somewhat worried","South",0.33
+5,5,"Somewhat worried","West",0.34
+5,5,"Not too worried","Northeast",0.38
+5,5,"Not too worried","Midwest",0.41
+5,5,"Not too worried","South",0.34
+5,5,"Not too worried","West",0.32
+5,5,"Not worried at all","Northeast",0.13
+5,5,"Not worried at all","Midwest",0.19
+5,5,"Not worried at all","South",0.2
+5,5,"Not worried at all","West",0.18
+5,6,"Very worried","Northeast",0.12
+5,6,"Very worried","Midwest",0.14
+5,6,"Very worried","South",0.16
+5,6,"Very worried","West",0.11
+5,6,"Somewhat worried","Northeast",0.41
+5,6,"Somewhat worried","Midwest",0.31
+5,6,"Somewhat worried","South",0.37
+5,6,"Somewhat worried","West",0.31
+5,6,"Not too worried","Northeast",0.33
+5,6,"Not too worried","Midwest",0.36
+5,6,"Not too worried","South",0.32
+5,6,"Not too worried","West",0.38
+5,6,"Not worried at all","Northeast",0.14
+5,6,"Not worried at all","Midwest",0.18
+5,6,"Not worried at all","South",0.15
+5,6,"Not worried at all","West",0.19
+5,7,"Very worried","Northeast",0.16
+5,7,"Very worried","Midwest",0.13
+5,7,"Very worried","South",0.14
+5,7,"Very worried","West",0.18
+5,7,"Somewhat worried","Northeast",0.45
+5,7,"Somewhat worried","Midwest",0.4
+5,7,"Somewhat worried","South",0.42
+5,7,"Somewhat worried","West",0.38
+5,7,"Not too worried","Northeast",0.27
+5,7,"Not too worried","Midwest",0.36
+5,7,"Not too worried","South",0.34
+5,7,"Not too worried","West",0.34
+5,7,"Not worried at all","Northeast",0.11
+5,7,"Not worried at all","Midwest",0.1
+5,7,"Not worried at all","South",0.1
+5,7,"Not worried at all","West",0.11
