@@ -18,12 +18,12 @@ ui <- fluidPage(
     #user select input of question
     selectInput(inputId = "question",
               label = "Select your instered question: ",
-              choices = unique(),
+              choices = unique(questions),
               selected = NULL)),
   #user select input of category
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(colnames(df1)),
+              choices = unique(),
               selected = NULL),
   #main
   mainPanel(
