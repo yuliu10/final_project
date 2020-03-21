@@ -7,6 +7,13 @@ output: html_document
 
 ###Feb 2-4 (Week 1)
 ```{r}
+
+library(dplyr)
+library(shiny)
+library(tidyverse)
+
+
+
 income.1.1 = cleaned.income.table1.1[1:4,] %>% # we only want rows 1:4 because we don't need Totals and Unweighted N
   mutate(response = factor(x1)) %>%
   select(-x1, -Total) %>%
