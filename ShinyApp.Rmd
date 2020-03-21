@@ -9,6 +9,11 @@ library(shiny)
 library(dplyr)
 library(tidyverse)
 ```
+
+```{r}
+data_frame_name = read_csv("agedf.csv")
+```
+
 ```{r}
 ui <- fluidPage(
   #create a layout
@@ -16,23 +21,21 @@ ui <- fluidPage(
     #sidebar area
   sidebarPanel(
     #user select their interested from the drop down menu
-    selectInput(inputId = "question",#take user's input as variable question
+    selectInput(inputId = "question",
               label = "Select your instered question: ",
-              choices = unique(questions), #options in the dropdown menu
-              selected = NULL)),#default selection
+              choices = unique(questions), 
+              selected = NULL)),
   #user select their interested category from the drop down menu
   selectInput(inputId = "catergory",
               label = "Select your interested catergory: ",
-              choices = unique(),
+              choices = unique(reponse),
               selected = NULL),
   #main area
-  mainPanel(
-    tabsetPanel(#the distribution tab
-      tabPanel("Distribution", plotOutput("selected_graph")),#the tab shows the graph
+  mainPanel("Distribution", plotOutput("selected_graph")),
     #position of sidebar
     position = c("left"),
     #fixed
-    fluid = FALSE))))
+    fluid = FALSE))
 
 server <- function(input, output){
   #filter out the needed data
@@ -41,7 +44,7 @@ server <- function(input, output){
   
   #output of ggplot
   output$selected_graph <- renderPlot({
-    ggplot(data=data_frame_name,aes(x=week,y=percent, group = response))+
+    ggplot(data=data_frame_name2,aes(x=week,y=percent, group = response))+
       geom_point()+geom_line(aes(color=response))
       ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of",input$destination))})}
   
