@@ -60,14 +60,16 @@ ui <- fluidPage(
     #fixed
     fluid = FALSE))
 
-server <- function(input, output){
+full_data %>% filter(question==1 & category_choice=="age" & category=="18-29")
+
+  server <- function(input, output){
   #filter out the needed data
   full_data2 <- reactive({
-    filter(full_data, question==input$question & category_choice==input$category) & category=input$demographic})
+    filter(full_data, question==input$question & category_choice==input$category & category==input$demographic)})
   
   #output of ggplot
   output$selected_graph <- renderPlot({
-    ggplot(data=full_data2,aes(x=week,y=percent, group = response))+
+    ggplot(data=full_data2(),aes(x=week,y=percent, group = response))+
       geom_point()+geom_line(aes(color=response))
       ggtitle(paste("Proportional Changes in Answer Based on ",input$category,"of question:",input$questions))})}
   
